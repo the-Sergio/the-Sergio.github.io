@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.csupomona.cs480.App;
-import edu.csupomona.cs480.data.User;
-import edu.csupomona.cs480.data.provider.UserManager;
-
+import edu.csupomona.cs480.data.Food;
+import edu.csupomona.cs480.data.provider.FoodManager;
 
 /**
  * This is the controller used by Spring framework.
@@ -35,7 +34,7 @@ public class WebController {
 	 * the {@link App} class.
 	 */
     @Autowired
-    private UserManager userManager;
+    private FoodManager foodManager;
 
     /**
      * This is a simple example of how the HTTP API works.
@@ -49,7 +48,7 @@ public class WebController {
     	// You can replace this with other string,
     	// and run the application locally to check your changes
     	// with the URL: http://localhost:8080/
-        return "OK";
+        return "OK RUNNING";
     }
 
     /**
@@ -62,15 +61,15 @@ public class WebController {
      * Try it in your web browser:
      * 	http://localhost:8080/cs480/user/user101
      */
-    @RequestMapping(value = "/cs480/user/{userId}", method = RequestMethod.GET)
-    User getUser(@PathVariable("userId") String userId) {
-    	User user = userManager.getUser(userId);
-        return user;
+    @RequestMapping(value = "/cs480/user/{foodId}", method = RequestMethod.GET)
+    Food getFood(@PathVariable("foodId") String foodId) {
+    	Food food = foodManager.getFood(foodId);
+        return food;
     }
 
     /**
      * This is an example of sending an HTTP POST request to
-     * update a user's information (or create the user if not
+     * update a food's information (or create the food if not
      * exists before).
      *
      * You can test this with a HTTP client by sending
@@ -82,42 +81,53 @@ public class WebController {
      * curl.
      *
      * @param id
-     * @param name
-     * @param major
+     * @param price
+     * @param description
      * @return
      */
-    @RequestMapping(value = "/cs480/user/{userId}", method = RequestMethod.POST)
-    User updateUser(
-    		@PathVariable("userId") String id,
-    		@RequestParam("name") String name,
-    		@RequestParam(value = "major", required = false) String major) {
-    	User user = new User();
-    	user.setId(id);
-    	user.setMajor(major);
-    	user.setName(name);
-    	userManager.updateUser(user);
-    	return user;
+    @RequestMapping(value = "/cs480/user/{foodId}", method = RequestMethod.POST)
+    Food updateFood(
+    		@PathVariable("foodId") String id,
+    		@RequestParam("price") String price,
+    		@RequestParam(value = "description", required = false) String description) {
+    	Food food = new Food();
+    	food.setId(id);
+    	food.setPrice(price);
+    	food.setDescription(description);
+    	foodManager.updateFood(food);
+    	return food;
     }
 
     /**
-     * This API deletes the user. It uses HTTP DELETE method.
+     * This API deletes the food. It uses HTTP DELETE method.
      *
-     * @param userId
+     * @param foodId
      */
-    @RequestMapping(value = "/cs480/user/{userId}", method = RequestMethod.DELETE)
-    void deleteUser(
-    		@PathVariable("userId") String userId) {
-    	userManager.deleteUser(userId);
+    @RequestMapping(value = "/cs480/user/{foodId}", method = RequestMethod.DELETE)
+    void deleteFood(
+    		@PathVariable("foodId") String foodId) {
+    	foodManager.deleteFood(foodId);
     }
 
     /**
-     * This API lists all the users in the current database.
+     * This API list the food for the given price.
+     *
+     * @param price
+     */
+    @RequestMapping(value = "/cs480/food/{price}", method = RequestMethod.GET)
+    List<Food> getPriceList(
+    		@PathVariable("price") String price) {
+    	return foodManager.listFoodsUnder(price);
+    }
+    
+    /**
+     * This API lists all the foods in the current database.
      *
      * @return
      */
     @RequestMapping(value = "/cs480/users/list", method = RequestMethod.GET)
-    List<User> listAllUsers() {
-    	return userManager.listAllUsers();
+    List<Food> listAllFoods() {
+    	return foodManager.listAllFoods();
     }
 
     /*********** Web UI Test Utility **********/
@@ -128,8 +138,9 @@ public class WebController {
     @RequestMapping(value = "/cs480/home", method = RequestMethod.GET)
     ModelAndView getUserHomepage() {
         ModelAndView modelAndView = new ModelAndView("home");
-        modelAndView.addObject("users", listAllUsers());
+        modelAndView.addObject("foods", listAllFoods());
+        
         return modelAndView;
     }
-
+    
 }

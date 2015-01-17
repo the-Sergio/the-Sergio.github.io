@@ -23,43 +23,42 @@
 
     <div>
         <div>
-            <label>User List</label>
+            <label>Food List</label>
             <table border="1">            
                 <tr>
-                    <td>ID</td>
-                    <td>Name</td> 
-                    <td>Major</td> 
-                    <td>Creation Time</td>
+                    <td>Food ID</td>
+                    <td>Price</td> 
+                    <td>Description</td> 
                     <td>Delete</td>
                 </tr>
-                <#list users as user>
+                <#list foods as food> 
                         <tr>
-                            <td>${user.id}</td>
-                            <td>${user.name}</td>
-                            <td>${user.major}</td>
-                            <td>${user.creationTime}</td>
-                            <td><button onclick="deleteUser('${user.id}')">Delete</button></td>
+                            <td>${food.id}</td>
+                            <td>${food.price}</td>
+                            <td>${food.description}</td>
+                            <td><button onclick="deleteFood('${food.id}')">Delete</button></td>
                         </tr>
                 </#list>
+             
             </table>
         </div>
         
         <hr>
         
         <div>
-            <label>Add User</label>
+            <label>Add Food</label>
             <table border="1">
                 <tr>
-                    <td>ID</td>
-                    <td>Name</td> 
-                    <td>Major</td>                     
+                    <td>Food ID</td>
+                    <td>Price</td> 
+                    <td>Description</td>                     
                     <td>Add</td>
                 </tr>                
                 <tr>
                     <td><input type="text" id="input_id"></td>
-                    <td><input type="text" id="input_name"></td>
-                    <td><input type="text" id="input_major"></td>                    
-                    <td><button onclick="addUser()">Add</button></td>
+                    <td><input type="text" id="input_price"></td>
+                    <td><input type="text" id="input_description"></td>                    
+                    <td><button onclick="addFood()">Add</button></td>
                 </tr>
             </table>
         </div>
@@ -67,24 +66,49 @@
         <hr>
 
         <div>
-            <label>Query User</label>
-            <input type="text" id="query_id"><button onclick="getUser()">Get</button>
+            <label>Query Food</label>
+            <input type="text" id="query_id"><button onclick="getFood()">Get</button>
             <table border="1">
                 <tr>
                     <td>ID</td>
-                    <td>Name</td>
-                    <td>Major</td>
+                    <td>Price</td>
+                    <td>Description</td>
                 </tr>
                 <tr>
                     <td><label id="result_id"></td>
-                    <td><label id="result_name"></td>
-                    <td><label id="result_major"></td>
+                    <td><label id="result_price"></td>
+                    <td><label id="result_description"></td>
                 </tr>
             </table>
         </div>
     </div>
+ 
+    <hr>
     
-    
+    <div>
+        <label>Query Price</label>
+        <input type="text" id="query_price"><button onClick="getPrices()">Get</button>
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>Price</td>
+                <td>Description</td>
+            </tr>
+            
+            <tr>
+               <!-- <#list foods as current_food> 
+                        <tr>
+                            <td>${current_food.id}</td>
+                            <td>${current_food.price}</td>
+                            <td>${current_food.description}</td>
+                        </tr>
+                </#list> -->
+                
+               
+        </table>
+  
+    </div>
+    </hr>
 </body>
 
 </html>

@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import edu.csupomona.cs480.data.provider.FSUserManager;
-import edu.csupomona.cs480.data.provider.UserManager;
+import edu.csupomona.cs480.data.provider.FSFoodManager;
+import edu.csupomona.cs480.data.provider.FoodManager;
 
 @Configuration
 @EnableAutoConfiguration
@@ -21,9 +21,9 @@ public class App {
      * annotation is applied.
      */
     @Bean
-    public UserManager userManager() {
-        UserManager userManager = new FSUserManager();
-        return userManager;
+    public FoodManager foodManager() {
+        FoodManager foodManager = new FSFoodManager();
+        return foodManager;
     }
 
     /**
@@ -34,7 +34,7 @@ public class App {
      * you cannot put extra main method when building your project.
      */
     public static void main(String[] args) throws Exception {
-        // Run Spring Boot
+        //Run Spring Boot
         SpringApplication.run(App.class, args);
     }
 }

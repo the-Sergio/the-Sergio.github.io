@@ -16,68 +16,94 @@ function healthCheck() {
 }
 
 
-function deleteUser(userId) {
+function deleteFood(foodId) {
 	$.ajax(
 			{
 				type : "DELETE",
-				url  : "/cs480/user/" + userId,
+				url  : "/cs480/user/" + foodId,
 				data : {
 				},
 				success : function(result) {
 					location.reload();
 				},
 				error: function (jqXHR, exception) {
-					alert("Failed to delete the photo.");
+					alert("Failed to delete the food.");
 				}
 			});
 }
 
-function addUser() {
+function addFood() {
 
-	var userId = $('#input_id').val();
-	var userName = $('#input_name').val();
-	var userMajor = $('#input_major').val();
+	var foodId = $('#input_id').val();
+	var foodPrice = $('#input_price').val();
+	var foodDescription = $('#input_description').val();
 
-	if (userId) {
+	if (foodId) {
 		$.ajax(
 				{
 					type : "POST",
-					url  : "/cs480/user/" + userId,
+					url  : "/cs480/user/" + foodId,
 					data : {
-						"name" : userName,
-						"major" : userMajor
+						"price" : foodPrice,
+						"description" : foodDescription
 					},
 					success : function(result) {
 						location.reload();
 					},
 					error: function (jqXHR, exception) {
-						alert("Failed to add the user. Please check the inputs.");
+						alert("Failed to add the food. Please check the inputs.");
 					}
 				});
 	} else {
-		alert("Invalid user Id");
+		alert("Invalid food Id");
 	}
 }
 
-function getUser(userId) {
-	var userId = $('#query_id').val();
-	if (userId) {
+function getFood(foodId) {
+	var foodId = $('#query_id').val();
+	if (foodId) {
 		$.ajax(
 				{
 					type : "GET",
-					url  : "/cs480/user/" + userId,
+					url  : "/cs480/user/" + foodId,
 					data : {
 					},
 					success : function(result) {
 						$('#result_id').text(result.id);
-						$('#result_name').text(result.name);
-						$('#result_major').text(result.major);
+						$('#result_price').text(result.price);
+						$('#result_description').text(result.description);
 					},
 					error: function (jqXHR, exception) {
-						alert("Failed to get the user.");
+						alert("Failed to get the food.");
 					}
 				});
 	} else {
-		alert("Invalid user Id");
+		alert("Invalid food Id");
 	}
 }
+
+function getPrices(price) {
+    var price = $('#query_price').val();
+    if(price){
+       $.ajax(
+				{
+					type : "GET",
+					url  : "/cs480/food/" + price,
+					data : {
+					},
+					success : function(result) {
+						alert(price);
+						$('#res_id').text(result.id);
+						$('#res_price').text(result.price);
+						$('#res_description').text(result.description);
+					},
+					error: function (jqXHR, exception) {
+						alert("Failed to get the price.");
+					}
+				});
+    } else{
+        alert("Invalid Price");
+    }
+}
+
+
