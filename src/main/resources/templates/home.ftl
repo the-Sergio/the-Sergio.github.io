@@ -96,17 +96,14 @@
             </tr>
             
             <tr>
-               <!-- <#list foods as current_food> 
+               <#list foods as current_food>
                         <tr>
                             <td>${current_food.id}</td>
                             <td>${current_food.price}</td>
                             <td>${current_food.description}</td>
                         </tr>
-                </#list> -->
-                
-               
+                </#list>
         </table>
-  
     </div>
     </hr>
 </body>

@@ -119,6 +119,16 @@ public class WebController {
     		@PathVariable("price") String price) {
     	return foodManager.listFoodsUnder(price);
     }
+
+    /**
+     * This API returns if there are foods in the database.
+     *
+     * For assignment 3, by Jacob Buchowiecki.
+     */
+    @RequestMapping(value = "/cs480/food/hasFoods", method = RequestMethod.GET)
+    boolean hasFoods(){
+        return !foodManager.listAllFoods().isEmpty();
+    }
     
     /**
      * This API lists all the foods in the current database.
