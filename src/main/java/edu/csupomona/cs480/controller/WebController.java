@@ -152,5 +152,15 @@ public class WebController {
         
         return modelAndView;
     }
+    /**
+     * Test API for A3
+     *
+     * Claude Phan
+     */
+    @RequestMapping(value = "/cs480/ClaudeAPI", method = RequestMethod.GET)
+    String Claude() {
+    	
+        return "OK RUNNING";
+    }
     
 }
