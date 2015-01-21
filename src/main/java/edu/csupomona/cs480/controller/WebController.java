@@ -163,4 +163,13 @@ public class WebController {
         return "OK RUNNING";
     }
     
+    /**
+     *Roberto Rodriguez API
+     */
+    @RequestMapping(value = "/cs480/Roberto", method = RequestMethod.GET)
+    String Roberto() {
+    	
+        return "Roberto!";
+    }
+    
 }
