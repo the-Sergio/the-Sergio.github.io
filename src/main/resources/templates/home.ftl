@@ -73,7 +73,7 @@
                     <td>ID</td>
                     <td>Price</td>
                     <td>Description</td>
-                </tr>
+                </tr> 
                 <tr>
                     <td><label id="result_id"></td>
                     <td><label id="result_price"></td>
@@ -88,7 +88,18 @@
     <div>
         <label>Query Price</label>
         <input type="text" id="query_price"><button onClick="getPrices()">Get</button>
-        <table border="1">
+        <p></br></p>
+        <label>ID		Price		Description</label> 
+        <p></br></p>
+        <label id="Test_label">
+        
+        <!--<table border="1">
+      		<p></br></p>
+      		<p></br></p>
+      		<p></br></p>
+            <label id="Test_label">
+            
+            
             <tr>
                 <td>ID</td>
                 <td>Price</td>
@@ -96,14 +107,11 @@
             </tr>
             
             <tr>
-               <#list foods as current_food>
-                        <tr>
-                            <td>${current_food.id}</td>
-                            <td>${current_food.price}</td>
-                            <td>${current_food.description}</td>
-                        </tr>
-                </#list>
-        </table>
+                    <td><label id="res_id"></td>
+                    <td><label id="res_price"></td>
+                    <td><label id="res_description"></td>
+                </tr>
+        </table>-->
     </div>
     </hr>
 </body>

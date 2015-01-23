@@ -96,9 +96,9 @@ public class FSFoodManager implements FoodManager {
 		
 		FoodMap foodMap = getFoodMap();
 		
-		ArrayList<Food> currentList = new ArrayList<Food>(foodMap.values());
+		List<Food> currentList = new ArrayList<Food>(foodMap.values());
 		
-		ArrayList<Food> newList = new ArrayList<Food>();
+		List<Food> newList = new ArrayList<Food>();
 		
 		for(Food s : currentList ){
 			if(Integer.parseInt(s.getPrice()) <= price){

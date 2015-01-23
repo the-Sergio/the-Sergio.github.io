@@ -69,6 +69,7 @@ function getFood(foodId) {
 					data : {
 					},
 					success : function(result) {
+						alert(result.description);
 						$('#result_id').text(result.id);
 						$('#result_price').text(result.price);
 						$('#result_description').text(result.description);
@@ -92,10 +93,21 @@ function getPrices(price) {
 					data : {
 					},
 					success : function(result) {
-						alert(price);
-						$('#res_id').text(result.id);
-						$('#res_price').text(result.price);
-						$('#res_description').text(result.description);
+						
+						alert(result.length);
+						var test = "";
+						
+						for(i = 0; i < result.length; i++)
+						{	
+							test += result[i].id + "     " + result[i].price + "     " + result[i].description + "<br />";
+						} 
+							
+						
+						$('#Test_label').html(test); 
+						
+						/*$('#res_id').text(result[0].id);
+						$('#res_price').text(result[0].price);
+						$('#res_description').text(result[0].description);*/
 					},
 					error: function (jqXHR, exception) {
 						alert("Failed to get the price.");
