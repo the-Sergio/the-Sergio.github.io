@@ -94,7 +94,7 @@ function getPrices(price) {
 					},
 					success : function(result) {
 						
-						alert(result.length);
+						//alert(result.length);
 						var test = "";
 						
 						for(i = 0; i < result.length; i++)
