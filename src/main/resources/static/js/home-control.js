@@ -103,8 +103,8 @@ function getPrices(price) {
 						} 
 							
 						
-						$('#Test_label').html(test); 
-						
+						//$('#Test_label').html("<table border = &quot;3&quot;><tr><td>Hi</td><td>Bo</td></tr><tr><td>Hi2</td><td>Bo2</td></tr></table>"); 
+						$('#Test_label').html(test);
 						/*$('#res_id').text(result[0].id);
 						$('#res_price').text(result[0].price);
 						$('#res_description').text(result[0].description);*/
