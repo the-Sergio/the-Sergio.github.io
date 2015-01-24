@@ -92,16 +92,18 @@ public class FSFoodManager implements FoodManager {
 	
 	@Override
 	public List<Food> listFoodsUnder(String foodPrice){
-		int price = Integer.parseInt(foodPrice);
+		float price = Float.parseFloat(foodPrice);
 		
 		FoodMap foodMap = getFoodMap();
 		
-		ArrayList<Food> currentList = new ArrayList<Food>(foodMap.values());
+		List<Food> currentList = new ArrayList<Food>(foodMap.values());
 		
-		ArrayList<Food> newList = new ArrayList<Food>();
+		List<Food> newList = new ArrayList<Food>();
+		
+		System.out.println("Parse my price: " + price + " foodprice:" + foodPrice );
 		
 		for(Food s : currentList ){
-			if(Integer.parseInt(s.getPrice()) <= price){
+			if(Float.parseFloat(s.getPrice()) <= price){
 				newList.add(s);
 			}
 		}

@@ -69,6 +69,7 @@ function getFood(foodId) {
 					data : {
 					},
 					success : function(result) {
+						alert(result.description);
 						$('#result_id').text(result.id);
 						$('#result_price').text(result.price);
 						$('#result_description').text(result.description);
@@ -84,6 +85,7 @@ function getFood(foodId) {
 
 function getPrices(price) {
     var price = $('#query_price').val();
+    price = price.replace(".","_");
     if(price){
        $.ajax(
 				{
@@ -92,10 +94,23 @@ function getPrices(price) {
 					data : {
 					},
 					success : function(result) {
-						alert(price);
-						$('#res_id').text(result.id);
-						$('#res_price').text(result.price);
-						$('#res_description').text(result.description);
+						
+						//alert(result.length);
+						var test = "<table border = &quot;10&quot;><tr><td>Location</td><td>Item</td><td>Price</td></tr>";
+						
+						
+						
+						for(i = 0; i < result.length; i++)
+						{	
+							test += "<tr><td>" + result[i].id + "</td><td>" + result[i].description + "</td><td>" + result[i].price + "</td></tr>";
+						} 
+							
+						test += "</table>";
+						//$('#Test_label').html("<table border = &quot;3&quot;><tr><td>Hi</td><td>Bo</td></tr><tr><td>Hi2</td><td>Bo2</td></tr></table>"); 
+						$('#Test_label').html(test);
+						/*$('#res_id').text(result[0].id);
+						$('#res_price').text(result[0].price);
+						$('#res_description').text(result[0].description);*/
 					},
 					error: function (jqXHR, exception) {
 						alert("Failed to get the price.");

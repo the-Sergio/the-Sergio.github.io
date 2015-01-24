@@ -117,7 +117,9 @@ public class WebController {
     @RequestMapping(value = "/cs480/food/{price}", method = RequestMethod.GET)
     List<Food> getPriceList(
     		@PathVariable("price") String price) {
-    	return foodManager.listFoodsUnder(price);
+   	price = price.replace('_', '.');
+    	List<Food> LF = foodManager.listFoodsUnder(price);
+    	return LF;
     }
 
     /**
