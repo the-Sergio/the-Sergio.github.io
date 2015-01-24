@@ -85,6 +85,7 @@ function getFood(foodId) {
 
 function getPrices(price) {
     var price = $('#query_price').val();
+    price = price.replace(".","_");
     if(price){
        $.ajax(
 				{
@@ -95,14 +96,16 @@ function getPrices(price) {
 					success : function(result) {
 						
 						//alert(result.length);
-						var test = "";
+						var test = "<table border = &quot;10&quot;><tr><td>Location</td><td>Item</td><td>Price</td></tr>";
+						
+						
 						
 						for(i = 0; i < result.length; i++)
 						{	
-							test += result[i].id + "     " + result[i].price + "     " + result[i].description + "<br />";
+							test += "<tr><td>" + result[i].id + "</td><td>" + result[i].description + "</td><td>" + result[i].price + "</td></tr>";
 						} 
 							
-						
+						test += "</table>";
 						//$('#Test_label').html("<table border = &quot;3&quot;><tr><td>Hi</td><td>Bo</td></tr><tr><td>Hi2</td><td>Bo2</td></tr></table>"); 
 						$('#Test_label').html(test);
 						/*$('#res_id').text(result[0].id);

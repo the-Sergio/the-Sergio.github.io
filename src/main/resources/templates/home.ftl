@@ -89,29 +89,12 @@
         <label>Query Price</label>
         <input type="text" id="query_price"><button onClick="getPrices()">Get</button>
         <p></br></p>
-        <label>ID		Price		Description</label> 
-        <p></br></p>
+        
         <label id="Test_label">
         
-        <!--<table border="1">
-      		<p></br></p>
-      		<p></br></p>
-      		<p></br></p>
-            <label id="Test_label">
-            
-            
-            <tr>
-                <td>ID</td>
-                <td>Price</td>
-                <td>Description</td>
-            </tr>
-            
-            <tr>
-                    <td><label id="res_id"></td>
-                    <td><label id="res_price"></td>
-                    <td><label id="res_description"></td>
-                </tr>
-        </table>-->
+        
+    
+    
     </div>
     </hr>
 </body>
