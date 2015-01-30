@@ -3,6 +3,8 @@ package edu.csupomona.cs480.data.provider;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -108,7 +110,15 @@ public class FSFoodManager implements FoodManager {
 			}
 		}
 		
-		
+		//Andy Montes 
+		//Sorting from lowest to highest price 
+		Collections.sort(newList, new Comparator<Food>(){
+			@Override
+			public int compare(Food f1, Food f2) {
+				return (int) (Float.parseFloat(f1.getPrice()) - Float.parseFloat(f2.getPrice()));
+				
+			}
+		});
 		return newList;
 		
 	}
