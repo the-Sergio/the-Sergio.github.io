@@ -96,13 +96,21 @@ function getPrices(price) {
 					success : function(result) {
 						
 						//alert(result.length);
-						var test = "<table border = \"3\"><tr><td>Location</td><td>Item</td><td>Price</td></tr>";
+						var test = "<table id = \"ResultTable\" border = \"3\" align=\"center\" width=\"50%\" ><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td></tr>";
 						
 						
 						
 						for(i = 0; i < result.length; i++)
 						{	
-							test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>" + result[i].price + "</td></tr>";
+							if(i%2 == 0) 
+							{
+								test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>" + "$" + result[i].price + "</td></tr>";
+							}
+							else
+							{
+								test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>" + "$" + result[i].price + "</td></tr>";
+							}
+							
 						} 
 							
 						test += "</table>";

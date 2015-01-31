@@ -4,7 +4,12 @@
     <title>CS480 Demo Web Service</title>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>    
     <script src="/js/home-control.js"></script>
+    <link rel="stylesheet" type="text/css" href="\mystyle.css"\>
 </head>
+
+
+
+
 
 <body>    
     
@@ -85,12 +90,12 @@
  
     <hr>
     
-    <div>
-        <label>Query Price</label>
-        <input type="text" id="query_price"><button onClick="getPrices()">Get</button>
-        <p></br></p>
+    <div><center>
+        <label>Grubbin Price</label>
+        <input type="text" id="query_price" ><button onClick="getPrices()">Get</button>
         
-        <label id="Test_label">
+        
+        <label id="Test_label"></center>
         
         
     
