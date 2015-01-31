@@ -111,12 +111,13 @@ public class FSFoodManager implements FoodManager {
 		}
 		
 		//Andy Montes 
-		//Sorting from lowest to highest price 
+		//Sorting from highest to lowest price 
 		Collections.sort(newList, new Comparator<Food>(){
 			@Override
 			public int compare(Food f1, Food f2) {
-				return (int) (Float.parseFloat(f1.getPrice()) - Float.parseFloat(f2.getPrice()));
-				
+				//return (int) (Float.parseFloat(f1.getPrice()) - Float.parseFloat(f2.getPrice()));
+				return Float.parseFloat(f1.getPrice()) > Float.parseFloat(f2.getPrice()) ? -1
+	                    : Float.parseFloat(f1.getPrice()) < Float.parseFloat(f2.getPrice()) ? 1 : 0;
 			}
 		});
 		return newList;
