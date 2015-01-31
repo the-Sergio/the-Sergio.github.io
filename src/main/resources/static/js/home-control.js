@@ -102,7 +102,7 @@ function getPrices(price) {
 						
 						for(i = 0; i < result.length; i++)
 						{	
-							test += "<tr><td>" + result[i].id + "</td><td>" + result[i].description + "</td><td>" + result[i].price + "</td></tr>";
+							test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>" + result[i].price + "</td></tr>";
 						} 
 							
 						test += "</table>";
