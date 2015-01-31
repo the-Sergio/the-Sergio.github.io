@@ -96,7 +96,7 @@ function getPrices(price) {
 					success : function(result) {
 						
 						//alert(result.length);
-						var test = "<table border = &quot;10&quot;><tr><td>Location</td><td>Item</td><td>Price</td></tr>";
+						var test = "<table border = \"3\"><tr><td>Location</td><td>Item</td><td>Price</td></tr>";
 						
 						
 						
