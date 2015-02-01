@@ -38,8 +38,8 @@ public class FSFoodManager implements FoodManager {
 		
         if (userFile.exists()) {
         	// read the file and convert the JSON content
-        	// to the UserMap object
-            try {
+			// to the FoodMap object
+			try {
 				foodMap = JSON.readValue(userFile, FoodMap.class);
 				
 			} catch (IOException e) {
@@ -95,21 +95,14 @@ public class FSFoodManager implements FoodManager {
 	@Override
 	public List<Food> listFoodsUnder(String foodPrice){
 		float price = Float.parseFloat(foodPrice);
-		
 		FoodMap foodMap = getFoodMap();
-		
 		List<Food> currentList = new ArrayList<Food>(foodMap.values());
-		
 		List<Food> newList = new ArrayList<Food>();
-		
-		System.out.println("Parse my price: " + price + " foodprice:" + foodPrice );
-		
 		for(Food s : currentList ){
 			if(Float.parseFloat(s.getPrice()) <= price){
 				newList.add(s);
 			}
 		}
-		
 		//Andy Montes 
 		//Sorting from highest to lowest price 
 		Collections.sort(newList, new Comparator<Food>(){
@@ -121,8 +114,5 @@ public class FSFoodManager implements FoodManager {
 			}
 		});
 		return newList;
-		
 	}
-
-
 }
