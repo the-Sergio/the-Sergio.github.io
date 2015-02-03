@@ -2,6 +2,8 @@ package edu.csupomona.cs480.controller;
 
 import java.util.List;
 
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import org.apache.commons.mail.SimpleEmail;
+import org.apache.commons.mail.Email;
 
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.Food;
@@ -175,5 +180,32 @@ public class WebController {
     	
         return "Roberto!";
     }
-    
+
+    /* Assignment 5 Maven API
+     * Jacob Buchowiecki
+     */
+    @RequestMapping(value = "/cs480/Email/{email}/{message}", method = RequestMethod.GET)
+    boolean emailTest (@PathVariable("email") String email, @PathVariable("message") String message) {
+        Email mail = new SimpleEmail();
+        mail.setHostName("smtp.gmail.com");
+        mail.setSmtpPort(465);
+        mail.setAuthenticator(new DefaultAuthenticator("crappytest93992@gmail.com", "111111112"));
+        mail.setSSLOnConnect(true);
+        try {
+            mail.setFrom("crappytest93992@gmail.com");
+        } catch (EmailException e) {
+            e.printStackTrace();
+            return false;
+        }
+        mail.setSubject("Test Mail");
+        try {
+            mail.setMsg(message);
+            mail.addTo(email);
+            mail.send();
+        } catch (EmailException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }
