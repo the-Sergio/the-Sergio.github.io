@@ -3,8 +3,6 @@ package edu.csupomona.cs480.data.provider;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,6 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.csupomona.cs480.data.Food;
 import edu.csupomona.cs480.data.FoodMap;
 import edu.csupomona.cs480.util.ResourceResolver;
+import edu.csupomona.cs480.util.SortingManager;
 
 /**
  * The implementation of {@link FoodManager} interface
@@ -20,6 +19,8 @@ import edu.csupomona.cs480.util.ResourceResolver;
  */
 public class FSFoodManager implements FoodManager {
 
+	//Added for sorting
+	private SortingManager sortingManager = new SortingManager();
 	/**
 	* persist all the food related objects as JSON.
 	*/
@@ -92,27 +93,25 @@ public class FSFoodManager implements FoodManager {
 		return new ArrayList<Food>(foodMap.values());
 	}
 	
+	//Andy Montes cleaned up sorting with new Ordering technique
 	@Override
 	public List<Food> listFoodsUnder(String foodPrice){
 		float price = Float.parseFloat(foodPrice);
+		
 		FoodMap foodMap = getFoodMap();
+		
 		List<Food> currentList = new ArrayList<Food>(foodMap.values());
 		List<Food> newList = new ArrayList<Food>();
+		
 		for(Food s : currentList ){
 			if(Float.parseFloat(s.getPrice()) <= price){
 				newList.add(s);
 			}
 		}
-		//Andy Montes 
-		//Sorting from highest to lowest price 
-		Collections.sort(newList, new Comparator<Food>(){
-			@Override
-			public int compare(Food f1, Food f2) {
-				//return (int) (Float.parseFloat(f1.getPrice()) - Float.parseFloat(f2.getPrice()));
-				return Float.parseFloat(f1.getPrice()) > Float.parseFloat(f2.getPrice()) ? -1
-	                    : Float.parseFloat(f1.getPrice()) < Float.parseFloat(f2.getPrice()) ? 1 : 0;
-			}
-		});
-		return newList;
+	
+		//Andy- uses the sortingManager class to sort 
+		//we can get creative with this when using a drop down menu
+		//future note => use Chaining method to sort
+		return sortingManager.highToLow(newList);
 	}
 }
