@@ -3,6 +3,12 @@ package edu.csupomona.cs480.controller;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import edu.csupomona.cs480.constructs.LunchboxManager;
@@ -219,6 +225,40 @@ public class WebController {
         return "BRING THE NOISE!";
     }
 
+    /**
+	   * Test API for A4
+      *
+		* Claude Phan
+		*/
+		@RequestMapping(value = "/cs480/ClaudeJsoup", method = RequestMethod.GET)
+		String Claude1() {
+		   Document doc;
+		  	try {
+		     
+		  		// need http protocol
+		 		doc = Jsoup.connect("http://google.com").get();
+		    
+		  		// get page title
+		  		String title = doc.title();
+		  		System.out.println("title : " + title);
+		     
+		 		// get all links
+		 		Elements links = doc.select("a[href]");
+		  		for (Element link : links) {
+		     
+				// get the value from href attribute
+				System.out.println("\nlink : " + link.attr("href"));
+				System.out.println("text : " + link.text());
+		     
+		  		}
+		     
+		  	} catch (IOException e) {
+		    e.printStackTrace();
+	  	}
+		    	
+		return "OK RUNNING";
+		}
+    
     /* Assignment 5 Maven API
      * Jacob Buchowiecki
      */
