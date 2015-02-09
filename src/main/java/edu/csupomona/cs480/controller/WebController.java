@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
 import org.apache.commons.mail.SimpleEmail;
 import org.apache.commons.mail.Email;
 
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.Food;
 import edu.csupomona.cs480.data.provider.FoodManager;
+import edu.princeton.cs.introcs.StdAudio;
 
 /**
  * This is the controller used by Spring framework.
@@ -179,6 +179,31 @@ public class WebController {
     String Roberto() {
     	
         return "Roberto!";
+    }
+    
+    /**
+     * Assignment 5
+     * Roberto Rodriguez
+     * 
+     * Plays simple sounds
+     */
+    @RequestMapping(value = "/cs480/sound", method = RequestMethod.GET)
+    String soundTest(){
+        
+        // scale increments
+        int[] steps = { 0, 2, 4, 5, 7, 9, 11, 12 };
+        
+        for (int i = 0; i < steps.length; i++) {
+            double hz = 440.0 * Math.pow(2, steps[i] / 12.0);
+            int N = (int) (StdAudio.SAMPLE_RATE * .5);
+            double[] a = new double[N+1];
+            for (int j = 0; j <= N; j++)
+                a[j] = .5 * Math.sin(2 * Math.PI * j * hz / StdAudio.SAMPLE_RATE);
+            StdAudio.play(a);
+        }
+
+        //StdAudio.close();
+        return "BRING THE NOISE!";
     }
 
     /* Assignment 5 Maven API
