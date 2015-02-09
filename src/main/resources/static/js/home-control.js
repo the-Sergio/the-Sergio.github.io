@@ -94,31 +94,21 @@ function getPrices(price) {
 					data : {
 					},
 					success : function(result) {
-						
-						//alert(result.length);
 						var test = "<table id = \"ResultTable\" border = \"3\" align=\"center\" width=\"50%\" ><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td></tr>";
-						
-						
-						
 						for(i = 0; i < result.length; i++)
 						{	
 							if(i%2 == 0) 
 							{
-								test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>" + "$" + result[i].price + "</td></tr>";
+								test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td></tr>";
 							}
 							else
 							{
-								test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>" + "$" + result[i].price + "</td></tr>";
+								test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td></tr>";
 							}
 							
-						} 
-							
+						}
 						test += "</table>";
-						//$('#Test_label').html("<table border = &quot;3&quot;><tr><td>Hi</td><td>Bo</td></tr><tr><td>Hi2</td><td>Bo2</td></tr></table>"); 
 						$('#Test_label').html(test);
-						/*$('#res_id').text(result[0].id);
-						$('#res_price').text(result[0].price);
-						$('#res_description').text(result[0].description);*/
 					},
 					error: function (jqXHR, exception) {
 						alert("Failed to get the price.");

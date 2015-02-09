@@ -30,6 +30,10 @@ a:focus {
 a:hover, a:active {
 	outline: 0
 }
+.searchFunc label {
+	display: inline-block;
+}
+
 sub, sup {
 	position: relative;
 	font-size: 75%;
@@ -790,7 +794,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	display: inline-block;
 	height: 16px;
 	padding: 4px 6px;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	font-size: 12px;
 	line-height: 20px;
 	color: #333;

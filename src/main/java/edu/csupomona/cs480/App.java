@@ -1,5 +1,6 @@
 package edu.csupomona.cs480;
 
+import edu.csupomona.cs480.constructs.LunchboxManager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -24,6 +25,12 @@ public class App {
     public FoodManager foodManager() {
         FoodManager foodManager = new FSFoodManager();
         return foodManager;
+    }
+
+    @Bean
+    public LunchboxManager lunchboxManager () {
+        LunchboxManager lunchboxManager = new LunchboxManager();
+        return lunchboxManager;
     }
 
     /**

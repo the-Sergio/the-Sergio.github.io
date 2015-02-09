@@ -1,7 +1,11 @@
 package edu.csupomona.cs480.controller;
 
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
+import edu.csupomona.cs480.constructs.LunchboxManager;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
 import org.apache.commons.mail.SimpleEmail;
 import org.apache.commons.mail.Email;
 
@@ -18,6 +23,11 @@ import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.Food;
 import edu.csupomona.cs480.data.provider.FoodManager;
 import edu.princeton.cs.introcs.StdAudio;
+import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.ViewResolver;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * This is the controller used by Spring framework.
@@ -40,6 +50,9 @@ public class WebController {
 	 */
     @Autowired
     private FoodManager foodManager;
+
+    @Autowired
+    private LunchboxManager lunchboxManager;
 
     /**
      * This is a simple example of how the HTTP API works.
@@ -124,9 +137,9 @@ public class WebController {
     @RequestMapping(value = "/cs480/food/{price}", method = RequestMethod.GET)
     List<Food> getPriceList(
     		@PathVariable("price") String price) {
-   	price = price.replace('_', '.');
-    	List<Food> LF = foodManager.listFoodsUnder(price);
-    	return LF;
+        price = price.replace('_', '.');
+        List<Food> LF = foodManager.listFoodsUnder(price);
+        return LF;
     }
 
     /**
@@ -232,5 +245,21 @@ public class WebController {
             return false;
         }
         return true;
+    }
+
+    @RequestMapping(value = "/cs480/lunchbox/{UID}", method = RequestMethod.GET)
+    List<Food> getLunchboxFoods (@PathVariable("UID") String UID) {
+        return lunchboxManager.getLunchbox(UID).getLunchbox();
+    }
+
+    @RequestMapping(value = "/cs480/lunchbox/{UID}/{foodPrice}", method = RequestMethod.GET)
+    void addFoodToLunchbox (@PathVariable("UID") String UID, @PathVariable("foodPrice") String foodPrice) {
+        foodPrice = foodPrice.replace('_', '.');
+        lunchboxManager.getLunchbox(UID).addItem(foodManager.getFood(foodPrice));
+    }
+
+    @RequestMapping(value = "/cs480/lunchbox/getUID", method = RequestMethod.GET)
+    String getUID () {
+        return lunchboxManager.makeUniqueId();
     }
 }

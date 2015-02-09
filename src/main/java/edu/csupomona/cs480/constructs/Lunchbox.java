@@ -1,7 +1,8 @@
-package edu.csupomona.cs480;
+package edu.csupomona.cs480.constructs;
 
 import edu.csupomona.cs480.data.Food;
 import edu.csupomona.cs480.data.provider.FoodManager;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +13,35 @@ import java.util.Random;
  */
 public class Lunchbox {
 
+    @Autowired
     private FoodManager foodManager;
 
-    public Lunchbox (FoodManager f) {
-        foodManager = f;
+    private List<Food> lunchbox;
+
+    public Lunchbox () {
+        lunchbox = new ArrayList<Food>();
+    }
+
+    public List<Food> getLunchbox () {
+        return lunchbox;
+    }
+
+    public void addItem (Food f) {
+        lunchbox.add(f);
+    }
+
+    public void removeItem (Food f) {
+        lunchbox.remove(f);
+    }
+
+    public double getLunchboxTotal () {
+        Food[] temp = new Food[lunchbox.size()];
+        lunchbox.toArray(temp);
+        double total = 0.0;
+        for (int i = 0; i < temp.length; i++) {
+            total += Double.parseDouble(temp[i].getPrice());
+        }
+        return total;
     }
 
     //Makes a lunchbox using the most expensive item that can fit in the lunchbox each time

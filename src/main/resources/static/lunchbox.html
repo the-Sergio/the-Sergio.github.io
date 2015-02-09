@@ -25,7 +25,7 @@
     <![endif]-->
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="/js/home-control.js"></script>
+    <script src="/js/lunchbox-control.js"></script>
 
     <style>
 
@@ -234,9 +234,13 @@
 
 
     </div>
-    <div>
+    <div id="dynContent">
         <center>
-            <!--Here goes the code for the lunchbox creator-->
+            <p></p>
+            <label>Lunchbox Builder</label>
+            <label style="display: inline-block;">Maximum Cash</label>
+            <input type="text" id="max_price">
+            <button onClick="setMaxPrice();">Begin</button>
         </center>
     </div>
     <div class="push"></div>
