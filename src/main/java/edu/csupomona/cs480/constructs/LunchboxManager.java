@@ -30,6 +30,7 @@ public class LunchboxManager {
         do {
             id = new BigInteger(130, r).toString(32);
         } while (lunchboxes.keySet().contains(id));
+        System.out.println("User made, id: " + id);
         return id;
     }
 }

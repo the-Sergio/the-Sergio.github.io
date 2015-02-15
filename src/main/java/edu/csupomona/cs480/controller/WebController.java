@@ -5,6 +5,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.io.IOException;
 
+import edu.csupomona.cs480.constructs.Lunchbox;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -300,6 +301,8 @@ public class WebController {
 
     @RequestMapping(value = "/cs480/lunchbox/getUID", method = RequestMethod.GET)
     String getUID () {
-        return lunchboxManager.makeUniqueId();
+        String UID = lunchboxManager.makeUniqueId();
+        lunchboxManager.addLunchbox(UID, new Lunchbox());
+        return UID;
     }
 }
