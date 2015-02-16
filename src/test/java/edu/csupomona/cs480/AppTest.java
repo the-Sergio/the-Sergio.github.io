@@ -104,4 +104,20 @@ public class AppTest
         assertNotSame(l1,l2);
         
     }
+    
+    //Claude Phan
+    //A6
+    public void TestGetItem () {
+       FoodMap f = new FoodMap();
+       Food testFood1 = new Food();
+       testFood1.setId("Orange Chicken");
+       testFood1.setDescription("Panda Express");
+       testFood1.setPrice("3.69");
+       f.put("TestFood1", testFood1);
+       assertEquals(f.get("TestFood1").getId(), "Orange Chicken");
+       assertEquals(f.get("TestFood1").getPrice(), "3.69");
+       assertEquals(f.get("TestFood1").getDescription(), "PandaExpress");
+       
+   }
+    
 }
