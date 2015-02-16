@@ -10,7 +10,7 @@ function setMaxPrice(price) {
 		data: {},
 		success: function(result) {
 			UID = result;
-			$('#dynContent').html("<center><p></p><label>Lunchbox Builder</label></center><div id=\"Lunchbox_Foods\"></div><div id=\"Foods_Under\"></div>");
+			$('#dynContent').html("<center><p></p><label>Lunchbox Builder</label><div id=\"Lunchbox_Foods\" style=\"display: inline-block; vertical-align: top; width: 33%\"></div><div id=\"Foods_Under\" style=\"display: inline-block; width: 33%\"></div></center>");
             getUserLunchbox();
             getPriceTableUnder();
 		},
@@ -21,24 +21,22 @@ function setMaxPrice(price) {
 }
 
 function addFoodToLunchbox(price) {
-	var price = price.replace(".","_");
-	if(food) {
-		$.ajax({
-			type: "GET",
-			url: "/cs480/lunchbox/" + UID + "/" + price,
-			data: {},
-			success: function(result) {
-				mPrice -= parseFloat(price.replace("_","."));
-				getUserLunchbox();
-				getPriceTableUnder();
-			},
-			error: function(jqXHR, exception) {
-				alert("Failed to add food.");
-			}
-		});
-	} else {
-		alert("Invalid food!");
-	}
+	var tempPrice = price.toString().replace(".","_");
+	$.ajax({
+		type: "POST",
+		url: "/cs480/lunchbox/" + price,
+		data: {
+			"UID" : UID
+		},
+		success: function(result) {
+			mPrice -= price;
+			getUserLunchbox();
+			getPriceTableUnder();
+		},
+		error: function(jqXHR, exception) {
+			alert("Failed to add food.");
+		}
+	});
 }
 
 function getPriceTableUnder() {
@@ -50,7 +48,7 @@ function getPriceTableUnder() {
 				data : {
 			},
 			success : function(result) {
-				var test = "<table id = \"ResultTable\" border = \"3\" align=\"center\" width=\"50%\"><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td><td></td></tr>";
+				var test = "<table border = \"3\"><tr><td width=\"20%\">Location</td><td width=\"55%\">Item</td><td width=\"15%\">Price</td><td width=\"10%\"></td></tr>";
 				for(i = 0; i < result.length; i++)
 					{
 						if(i%2 == 0)
@@ -59,7 +57,7 @@ function getPriceTableUnder() {
 						}
 						else
 						{
-							test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox('" + result[i].price + "')\">Add</button></td></tr>";
+							test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(" + result[i].price + ")\">Add</button></td></tr>";
 						}
 					}
 				test += "</table>";
@@ -80,7 +78,7 @@ function getUserLunchbox() {
     	url: "/cs480/lunchbox/" + UID,
     	data: {},
     	success: function(result) {
-			var pageContent = "<table id = \"ResultTable\" border = \"3\" align=\"center\" width=\"50%\"><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td></tr>";
+			var pageContent = "<table border = \"3\"><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td></tr>";
 			for(i = 0; i < result.length; i++) {
 				if(i%2 == 0) {
 					pageContent += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td></tr>";

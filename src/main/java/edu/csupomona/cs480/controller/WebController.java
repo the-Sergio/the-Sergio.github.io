@@ -293,10 +293,12 @@ public class WebController {
         return lunchboxManager.getLunchbox(UID).getLunchbox();
     }
 
-    @RequestMapping(value = "/cs480/lunchbox/{UID}/{foodPrice}", method = RequestMethod.GET)
-    void addFoodToLunchbox (@PathVariable("UID") String UID, @PathVariable("foodPrice") String foodPrice) {
+    @RequestMapping(value = "/cs480/lunchbox/{foodPrice}", method = RequestMethod.POST)
+    boolean addFoodToLunchbox (@PathVariable("foodPrice") String foodPrice
+            , @RequestParam("UID") String UID) {
         foodPrice = foodPrice.replace('_', '.');
         lunchboxManager.getLunchbox(UID).addItem(foodManager.getFood(foodPrice));
+        return true;
     }
 
     @RequestMapping(value = "/cs480/lunchbox/getUID", method = RequestMethod.GET)
