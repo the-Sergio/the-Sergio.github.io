@@ -307,4 +307,13 @@ public class WebController {
         lunchboxManager.addLunchbox(UID, new Lunchbox());
         return UID;
     }
+    
+    /**
+     * Jenkins test
+     */
+    @RequestMapping(value = "/cs480/Jenkins", method = RequestMethod.GET)
+    String JenkinsTest() {
+    	
+        return "Jenkins working";
+    }
 }
