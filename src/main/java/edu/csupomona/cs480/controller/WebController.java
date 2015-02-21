@@ -294,7 +294,12 @@ public class WebController {
         return lunchboxManager.getLunchbox(UID).getLunchbox();
     }
 
-    @RequestMapping(value = "/cs480/lunchbox/", method = RequestMethod.POST)
+    @RequestMapping(value = "/cs480/lunchbox/{UID}", method = RequestMethod.DELETE)
+    void removeLunchbox (@PathVariable("UID") String UID) {
+        lunchboxManager.remLunchbox(UID);
+    }
+
+    @RequestMapping(value = "/cs480/lunchbox/add", method = RequestMethod.POST)
     String addFoodToLunchbox (@RequestParam("UID") String UID
             , @RequestParam("Description") String description
             , @RequestParam("ID") String id
@@ -305,6 +310,20 @@ public class WebController {
         f.setDescription(description);
         Food temp = foodManager.getFood(foodManager.foodToKey(f));
         lunchboxManager.getLunchbox(UID).addItem(temp);
+        return temp.getPrice();
+    }
+
+    @RequestMapping(value = "/cs480/lunchbox/rem", method = RequestMethod.POST)
+    String remFoodFromLunchbox (@RequestParam("UID") String UID
+            , @RequestParam("Description") String description
+            , @RequestParam("ID") String id
+            , @RequestParam("Price") String price) {
+        Food f = new Food();
+        f.setId(id);
+        f.setPrice(price);
+        f.setDescription(description);
+        Food temp = foodManager.getFood(foodManager.foodToKey(f));
+        lunchboxManager.getLunchbox(UID).removeItem(temp);
         return temp.getPrice();
     }
 

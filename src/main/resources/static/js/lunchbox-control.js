@@ -38,7 +38,7 @@ function updateUI() {
 function addFoodToLunchbox(description, id, price) {
 	$.ajax({
 		type: "POST",
-		url: "/cs480/lunchbox/",
+		url: "/cs480/lunchbox/add",
 		data: {
 			"UID" : UID,
 			"Description" : description.replace('~', '\''),
@@ -48,6 +48,27 @@ function addFoodToLunchbox(description, id, price) {
 		success: function(result) {
 			mPrice -= parseFloat(result);
 			totalPrice += parseFloat(result);
+			updateUI();
+		},
+		error: function(jqXHR, exception) {
+			alert("Failed to add food.");
+		}
+	});
+}
+
+function remFoodFromLunchbox(description, id, price) {
+	$.ajax({
+		type: "POST",
+		url: "/cs480/lunchbox/rem",
+		data: {
+			"UID" : UID,
+			"Description" : description.replace('~', '\''),
+			"ID" : id,
+			"Price" : price
+		},
+		success: function(result) {
+			mPrice += parseFloat(result);
+			totalPrice -= parseFloat(result);
 			updateUI();
 		},
 		error: function(jqXHR, exception) {
@@ -95,12 +116,12 @@ function getUserLunchbox() {
     	url: "/cs480/lunchbox/" + UID,
     	data: {},
     	success: function(result) {
-			var pageContent = "<table border = \"3\"><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td></tr>";
+			var pageContent = "<table border = \"3\"><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td><td></td></tr>";
 			for(i = 0; i < result.length; i++) {
 				if(i%2 == 0) {
-					pageContent += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td></tr>";
+					pageContent += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"remFoodFromLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Remove</button></td></tr>";
 				} else {
-					pageContent += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td></tr>";;
+					pageContent += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"remFoodFromLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Remove</button></td></tr>";
 				}
 			}
 			pageContent += "</table>";
@@ -109,5 +130,19 @@ function getUserLunchbox() {
 		error: function(jqXHR, exception) {
 			alert("Failed to get user lunchbox!");
 		}
+    });
+}
+
+window.onbeforeunload = function () {
+    $.ajax({
+        type: "DELETE",
+        url: "/cs480/lunchbox/" + UID,
+        data: {},
+        success: function(result) {
+
+        },
+        error: function(jqXHR, exception) {
+            alert("Failed to get user lunchbox!");
+        }
     });
 }

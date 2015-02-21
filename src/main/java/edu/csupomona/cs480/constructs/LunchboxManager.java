@@ -25,6 +25,11 @@ public class LunchboxManager {
         return lunchboxes.get(id);
     }
 
+    public void remLunchbox (String id) {
+        lunchboxes.remove(id);
+        System.out.println("User removed, id: " + id);
+    }
+
     public String makeUniqueId () {
         String id = "";
         do {
