@@ -32,8 +32,8 @@ public interface FoodManager {
 	/**
 	 * Delete the given food from the storage.
 	 *
-	 * @param foodDescription
-	 */
+     * @param foodId
+     */
 	public void deleteFood(String foodId);
 
 	/**
@@ -49,6 +49,11 @@ public interface FoodManager {
 	 * @return
 	 */
 	public List<Food> listFoodsUnder(String foodPrice);
-	
 
+    /**
+     * Get a key for the given food in the foodmap
+     *
+     * @return
+     */
+    public String foodToKey (Food f);
 }

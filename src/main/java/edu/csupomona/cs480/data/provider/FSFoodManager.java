@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -67,10 +68,10 @@ public class FSFoodManager implements FoodManager {
 	}
 
 	@Override
-	public Food getFood(String foodPrice) {
-		FoodMap foodMap = getFoodMap();
-        return foodMap.get(foodPrice);
-	}
+    public Food getFood (String foodId) {
+        FoodMap foodMap = getFoodMap();
+        return foodMap.get(foodId);
+    }
 
 	
 	@Override
@@ -114,4 +115,22 @@ public class FSFoodManager implements FoodManager {
 		//future note => use Chaining method to sort
 		return sortingManager.highToLow(newList);
 	}
+
+    //Takes a food item and returns the key in the hashmap that the food item is under
+    public String foodToKey (Food f) {
+        FoodMap fMap = getFoodMap();
+        Set<String> keySet = fMap.keySet();
+        String[] keys = new String[keySet.size()];
+        keySet.toArray(keys);
+        for (int i = 0; i < keys.length; i++) {
+            Food test = fMap.get(keys[i]);
+            if (test.getPrice().equals(f.getPrice())
+                    && test.getId().equals(f.getId())
+                    && test.getDescription().equals(f.getDescription())) {
+                return keys[i];
+            }
+        }
+        System.out.println("Key doesn't exist for that item!");
+        return "";
+    }
 }

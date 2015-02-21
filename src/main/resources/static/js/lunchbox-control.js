@@ -1,18 +1,26 @@
 var mPrice = -1.0;
+var totalPrice = -1.0;
 var UID = "";
 
 function setMaxPrice(price) {
 	var price = $('#max_price').val();
 	mPrice = parseFloat(price);
+	totalPrice = 0.0;
 	$.ajax({
 		type: "GET",
 		url: "/cs480/lunchbox/getUID",
 		data: {},
 		success: function(result) {
 			UID = result;
-			$('#dynContent').html("<center><p></p><label>Lunchbox Builder</label><div id=\"Lunchbox_Foods\" style=\"display: inline-block; vertical-align: top; width: 33%\"></div><div id=\"Foods_Under\" style=\"display: inline-block; width: 33%\"></div></center>");
-            getUserLunchbox();
-            getPriceTableUnder();
+			var htm = "<center>";
+			htm += "<p></p><label>Lunchbox Builder</label>";
+			htm += "<div id=\"MaxPrice\" style=\"display: inline\"></div>";
+			htm += "<div id=\"BoxTotal\" style=\"display: inline-block\"></div><div id=\"empty\"></div>";
+			htm += "<div id=\"Lunchbox_Foods\" style=\"display: inline-block; vertical-align: top; width: 33%\"></div>";
+			htm += "<div id=\"Foods_Under\" style=\"display: inline-block; vertical-align: top; width: 33%\"></div>";
+			htm += "</center>";
+			$('#dynContent').html(htm);
+            updateUI();
 		},
 		error: function(jqXHR, exception) {
 			alert("Failed to get UID!");
@@ -20,18 +28,27 @@ function setMaxPrice(price) {
 	});
 }
 
-function addFoodToLunchbox(price) {
-	var tempPrice = price.toString().replace(".","_");
+function updateUI() {
+    $('#MaxPrice').html("Current funds: $" + mPrice.toFixed(2));
+    $('#BoxTotal').html("&nbsp;Lunchbox total: $" + totalPrice.toFixed(2));
+    getUserLunchbox();
+    getPriceTableUnder();
+}
+
+function addFoodToLunchbox(description, id, price) {
 	$.ajax({
 		type: "POST",
-		url: "/cs480/lunchbox/" + price,
+		url: "/cs480/lunchbox/",
 		data: {
-			"UID" : UID
+			"UID" : UID,
+			"Description" : description.replace('~', '\''),
+			"ID" : id,
+			"Price" : price
 		},
 		success: function(result) {
-			mPrice -= price;
-			getUserLunchbox();
-			getPriceTableUnder();
+			mPrice -= parseFloat(result);
+			totalPrice += parseFloat(result);
+			updateUI();
 		},
 		error: function(jqXHR, exception) {
 			alert("Failed to add food.");
@@ -53,11 +70,11 @@ function getPriceTableUnder() {
 					{
 						if(i%2 == 0)
 						{
-							test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(" + result[i].price + ")\">Add</button></td></tr>";
+							test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
 						}
 						else
 						{
-							test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(" + result[i].price + ")\">Add</button></td></tr>";
+							test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
 						}
 					}
 				test += "</table>";

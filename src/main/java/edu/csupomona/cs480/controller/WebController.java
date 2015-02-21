@@ -6,6 +6,7 @@ import java.util.Map;
 import java.io.IOException;
 
 import edu.csupomona.cs480.constructs.Lunchbox;
+import edu.csupomona.cs480.data.provider.FSFoodManager;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -293,12 +294,18 @@ public class WebController {
         return lunchboxManager.getLunchbox(UID).getLunchbox();
     }
 
-    @RequestMapping(value = "/cs480/lunchbox/{foodPrice}", method = RequestMethod.POST)
-    boolean addFoodToLunchbox (@PathVariable("foodPrice") String foodPrice
-            , @RequestParam("UID") String UID) {
-        foodPrice = foodPrice.replace('_', '.');
-        lunchboxManager.getLunchbox(UID).addItem(foodManager.getFood(foodPrice));
-        return true;
+    @RequestMapping(value = "/cs480/lunchbox/", method = RequestMethod.POST)
+    String addFoodToLunchbox (@RequestParam("UID") String UID
+            , @RequestParam("Description") String description
+            , @RequestParam("ID") String id
+            , @RequestParam("Price") String price) {
+        Food f = new Food();
+        f.setId(id);
+        f.setPrice(price);
+        f.setDescription(description);
+        Food temp = foodManager.getFood(foodManager.foodToKey(f));
+        lunchboxManager.getLunchbox(UID).addItem(temp);
+        return temp.getPrice();
     }
 
     @RequestMapping(value = "/cs480/lunchbox/getUID", method = RequestMethod.GET)
