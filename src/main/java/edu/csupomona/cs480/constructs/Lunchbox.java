@@ -34,11 +34,14 @@ public class Lunchbox {
         Food[] temp = new Food[lunchbox.size()];
         List<Food> newBox = new ArrayList<Food>();
         lunchbox.toArray(temp);
+        boolean found = false;
         for (int i = 0; i < temp.length; i++) {
             if (temp[i].getId().equals(f.getId())
                     && temp[i].getPrice().equals(f.getPrice())
-                    && temp[i].getDescription().equals(f.getDescription())) {
-                //skip this item, it is the item we want to remove
+                    && temp[i].getDescription().equals(f.getDescription())
+                    && !found) {
+                //skip this item, it is the item we want to remove, only the first time though
+                found = true;
             } else {
                 newBox.add(temp[i]);
             }
