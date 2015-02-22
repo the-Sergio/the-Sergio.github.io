@@ -1,6 +1,7 @@
 //Author: Andy Montes
 //This class does custome sorting using guava lib
 //Chaining for multiple sorting 
+//Andy Montes
 
 package edu.csupomona.cs480.util;
 
