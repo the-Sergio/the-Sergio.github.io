@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Cal Poly Pomona</title>
+    <meta charset="utf-8">
+
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=10.0" name="viewport">
+
+    <link href="files/cpp75m.css" rel="stylesheet">
+    <link href="files/cpp-print.css" media="print" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <link href="/common/resources/css/cpp75_ie9m.css?v=1391018138543" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+    <link href="/common/resources/css/cpp75_ie8m.css?v=1389739916515" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="/common/resources/js/html5shim.js?v=1367853890312" type="text/javascript"></script>
+    <script src="/common/resources/js/html5shiv-printshiv.js?v=1372868929627" type="text/javascript"></script>
+    <![endif]-->
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+
+    <script  src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+    <style>
+
+
+    </style>
+
+
+    <style id="ublock-preload-1ae7a5f130fc79b4fdb8a4272d9426b5">[href^="http://www.faceporn.net/free?"]
+        {display:none !important;}
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <div class="">
+
+
+        <a class="acc_skip" href="#main">Skip To Content</a>
+
+        <div class="navbar-inverse" id="utilityNav">
+
+            <div class="container navbar">
+                <div class="navbar-inner">
+
+                    <ul class="nav">
+                        <li><a href="http://www.cpp.edu/index.shtml">Home</a></li>
+                        <li><a href="http://www.csupomona.edu/%7Elibrary/">Library</a></li>
+                        <li><a href="http://www.cpp.edu/online-services.shtml">Online Services</a></li>
+                        <li><a href="https://win.webdev.csupomona.edu/bronco411/search/">Directory</a></li>
+                        <li><a href="http://www.csupomona.edu/maps/static/">Maps</a></li>
+                        <li><a href="http://www.csupomona.edu/events/">Calendar</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- end utilityNav -->
+
+
+        <div class="container" id="logo-search">
+            <div class="row">
+                <div class="span4 logo"><a href="http://www.cpp.edu/index.shtml" id="cpp-header-logo-link"><img
+                        alt="Cal Poly Pomona" src="files/logo.png"> Budget Grubbin</a></div>
+            </div>
+        </div>
+        <!-- end Logo and Search -->
+
+
+        <div id="globalNav">
+
+
+            <div class="navbar navbar-inverse container">
+
+                <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">Main Menu</a>
+
+
+                <div class="navbar-inner">
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="lunchbox.html">Build a Lunch Box</a></li>a
+                            <li><a href="simpleindex.html">Home</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <center>
+            <p></p>
+            <div ng-app="" ng-controller="customController" ng-init="cost = 0"> 
+				Cost: <input type="text" ng-model="cost" />
+				</br>
+				Location: <input type="text" ng-model="locationValue" /> 
+				</br>
+				I feel Like Eating: <input type="text" ng-model="eValue"/> 
+				</br>
+
+				<table>	
+					<tr>
+						<td>Location</td>
+						<td>Description</td>
+						<td>Price</td>
+					</tr>
+				    <tr ng-repeat="x in names | orderBy: 'price' : true | filter: { description: locationValue } | filter: showPrice | filter: eValue ">
+					<td>{{ x.description | uppercase }}</td>
+					<td>{{ x.id }}</td>
+					<td>{{ x.price }}</td>
+				    </tr>
+				</table>
+	
+			</div>
+
+			<script>
+				function customController($scope,$http) {
+					$http.get("food.json")
+					.success(function(response) {$scope.names = response;});
+
+					$scope.showPrice = function(x){
+    					return parseFloat(x.price) <= parseFloat($scope.cost);
+					};
+				}
+			</script>
+
+			<style>
+				table, th , td {
+				border: 1px solid green;
+				border-collapse: collapse;
+				padding: 5px;
+				}
+				table tr:nth-child(odd) {
+				background-color: #f1f1f1;
+				}
+				table tr:nth-child(even) {
+				background-color: #ffffff;
+				}
+			</style>
+        </center>
+    </div>
+    <div class="push"></div>
+</div>
+<footer>
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal hide fade" id="feedbackModal" role="dialog"
+         tabindex="-1"></div>
+    <div class="container">
+        
+            <div class="span3">
+                <ul class="social-media-links">
+                    <li><a href="http://www.facebook.com/calpolypomona"><img alt="Facebook Logo"
+                                                                             src="files/icon-facebook.png"></a></li>
+                    <li><a href="http://twitter.com/calpolypomona"><img alt="Twitter Logo" src="files/icon-twitter.png"></a>
+                    </li>
+                    <li><a href="https://plus.google.com/114788571527233526161/posts"><img alt="Google+ Logo"
+                                                                                           src="files/icon-google.png"></a>
+                    </li>
+                    <li><a href="http://www.linkedin.com/groupInvitation?gid=108072&amp;sharedKey=5E652438961B"><img
+                            alt="LinkedIn Logo" src="files/icon-linkedin.png"></a></li>
+                    <li><a href="http://www.youtube.com/calpolypomona"><img alt="YouTube Logo"
+                                                                            src="files/icon-youtube.png" height="27"
+                                                                            width="27"></a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <p align="right">© 2015 Budget Grubbin<br> <span class="sid">
+
+[1]</span> All Rights Reserved</p>
+            </div>
+    </div>
+    <script type="text/javascript" async="" src="files/8499.js"></script>
+    <script src="files/ga.js" async="" type="text/javascript"></script>
+    <script src="files/cpp75m.js" type="text/javascript">// <![CDATA[
+
+// ]]>
+
+
+
+    </script>
+</footer>
+
+
+<script type="text/javascript">
+var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-4659236-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+
+
+
+
+</script>
+
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0022/8499.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+
+
+
+
+</script>
+
+
+<style class="ublock-postload-1ae7a5f130fc79b4fdb8a4272d9426b5">[href^="http://www.faceporn.net/free?"]
+    {display:none !important;}
+</style>
+</body>
+</html>
