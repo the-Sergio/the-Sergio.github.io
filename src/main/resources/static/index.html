@@ -238,51 +238,59 @@
     </div>
     <div class="searchFunc">
         <center>
-        	<div ng-app="" ng-controller="customController" ng-init="cost = 0"> 
-				Cost: <input type="text" ng-model="cost" />
-				</br>
-				Location: <input type="text" ng-model="locationValue" /> 
-				</br>
-				I feel Like Eating: <input type="text" ng-model="eValue"/> 
-				</br>
-				Sort by: 
-				<select id="dropDown"  onchange="menuChanged()"> 
-					<option Value="highToLow"> High to Low </option>
-					<option Value="lowToHigh"> Low to High</option>
-				</select>
-				
-				<table>	
-					<tr>
-						<td>Location</td>
-						<td>Description</td>
-						<td>Price</td>
-					</tr>
-				    <tr ng-repeat="x in names | orderBy: 'price' : true | filter: { description: locationValue } | filter: showPrice | filter: eValue ">
-					<td>{{ x.description | uppercase }}</td>
-					<td>{{ x.id }}</td>
-					<td>{{ x.price }}</td>
-				    </tr>
-				</table>
-	
-			</div>
+        	<div ng-app="" ng-controller="customController " > 
+                Cost: <input type="text" ng-model="cost" />
+                </br>
+                Location: <input type="text" ng-model="locationValue" /> 
+                </br>
+                I feel Like Eating: <input type="text" ng-model="eValue"/> 
+                </br>
 
-			<script>
-				function menuChanged(){
-				alert("Changed dropped down");
-				}
+                <div ng-switch on="selected" ng-init="flag = true">
+                    <button ng-switch-when='true' ng-click='button1()'>$ Low to High</button>
+                    <button ng-switch-when='false' ng-click='button2()'>$ High to Low</button>
+                </div>
 
-			</script>
+                <table> 
+                    <tr>
+                        <td>Location</td>
+                        <td>Description</td>
+                        <td>Price</td>
+                    </tr>
+                    <tr ng-repeat="x in names | orderBy: 'price' : flag | filter: { description: locationValue } | filter: showPrice | filter: { id : eValue } ">
+                    <td>{{ x.description | uppercase }}</td>
+                    <td>{{ x.id }}</td>
+                    <td>{{ x.price }}</td>
+                    </tr>
+                </table>
+    
+            </div>
 
-			<script>
-				function customController($scope,$http) {
-					$http.get("food.json")
-					.success(function(response) {$scope.names = response;});
+            <script>
+                function customController($scope,$http) {
 
-					$scope.showPrice = function(x){
-    					return parseFloat(x.price) <= parseFloat($scope.cost);
-					};
-				}
-			</script>
+                    $http.get("food.json")
+                    .success(function(response) {$scope.names = response;});
+
+                    $scope.showPrice = function(x){
+                        return parseFloat(x.price) <= parseFloat($scope.cost);
+                    };
+
+                    $scope.selected = true;
+                    $scope.button1 = function () {
+                        //do logic for button 1
+                        $scope.selected = !$scope.selected;
+                        $scope.flag = false;
+                    }
+
+                   $scope.button2 = function () {
+                        //do logic for button 2
+                        $scope.selected = !$scope.selected;
+                        $scope.flag = true;
+                     }
+
+                }
+            </script>
 
 			<style>
 				table, th , td {
