@@ -8,14 +8,15 @@ import java.io.PrintWriter;
 public class CsvJsonConverter {
 
 	public static void main(String[] args) throws Exception {
-		String csvName = "prices.csv";
+		String csvName = "csv_prices1.csv";
 		FileReader filereader = new FileReader(new File(csvName));
 		BufferedReader csvreader = new BufferedReader(filereader);
 		
 		String jsonName = "food-map.json";
 		PrintWriter filewriter = new PrintWriter(new File(jsonName));
 
-		filewriter.println("{"); // beginning of json file
+		//filewriter.println("{"); // beginning of json file
+		filewriter.println("[");
 		
 		/*
 		 * For every line read in from prices.csv, use the first field (a 
@@ -34,7 +35,7 @@ public class CsvJsonConverter {
 		 */
 		for (String s; (s = csvreader.readLine()) != null; ) {
 			String[] strings = s.split(",");
-			filewriter.print("\"" + strings[0] + "\":");
+			//filewriter.print("\"" + strings[0] + "\":");
 			filewriter.print("{\"id\":\"" + strings[2] + "\",");
 			filewriter.print("\"description\":\"" + strings[1] + "\",");
 			filewriter.print("\"price\":\"" + strings[3] + "\"}");			
@@ -51,7 +52,8 @@ public class CsvJsonConverter {
 			}
 		}		
 		
-		filewriter.print("}"); // end of json file
+		//filewriter.print("}"); // end of json file
+		filewriter.println("]");
 		filewriter.close();
 		csvreader.close();
 	}
