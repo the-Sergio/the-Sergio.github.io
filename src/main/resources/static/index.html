@@ -238,20 +238,21 @@
     </div>
     <div class="searchFunc">
         <center>
-        	<div ng-app="" ng-controller="customController " > 
+        	<div ng-app="" ng-controller="customController" > 
                 Cost: <input type="text" ng-model="cost" />
-                </br>
-                Location: <input type="text" ng-model="locationValue" /> 
-                </br>
-                I feel Like Eating: <input type="text" ng-model="eValue"/> 
-                </br>
-
-                <div ng-switch on="selected" ng-init="flag = true">
-                    <button ng-switch-when='true' ng-click='button1()'>$ Low to High</button>
-                    <button ng-switch-when='false' ng-click='button2()'>$ High to Low</button>
+               <div class="eat place" ng-show = 'inputCheck()'>
+                        Location: <input type="text" ng-model="locationValue" /> 
+                </div>
+                <div class="eat type" ng-show = 'inputCheck()'>
+                        I feel Like Eating: <input type="text" ng-model="eValue"/> 
                 </div>
 
-                <table> 
+                <div ng-switch on="selected" ng-show = 'inputCheck()' ng-init="flag = true">
+                    Sort by: <button ng-switch-when='true' ng-click='button1()'>$ High To Low</button>
+                    <button ng-switch-when='false' ng-click='button2()'>$ Low to High</button>
+                </div>
+               <br>
+                <table ng-show = 'inputCheck()'> 
                     <tr>
                         <td>Location</td>
                         <td>Description</td>
@@ -265,6 +266,12 @@
                 </table>
     
             </div>
+
+            
+            
+            
+            </script>
+        
 
             <script>
                 function customController($scope,$http) {
@@ -288,6 +295,15 @@
                         $scope.selected = !$scope.selected;
                         $scope.flag = true;
                      }
+                   
+                   
+                  
+                   $scope.inputCheck = function(){
+                  	   if(parseFloat($scope.cost) > 0)
+                			   return true;
+                		   else
+                			   return false;
+                	}
 
                 }
             </script>
