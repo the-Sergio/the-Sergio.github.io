@@ -239,7 +239,7 @@
     <div class="searchFunc">
         <center>
         	<div ng-app="" ng-controller="customController" > 
-                Cost: <input type="text" ng-model="cost" />
+                Cost: $<input type="number" ng-model="cost" />
                <div class="eat place" ng-show = 'inputCheck()'>
                         Location: <input type="text" ng-model="locationValue" /> 
                 </div>
@@ -276,7 +276,7 @@
             <script>
                 function customController($scope,$http) {
 
-                    $http.get("food.json")
+                    $http.get("food-map.json")
                     .success(function(response) {$scope.names = response;});
 
                     $scope.showPrice = function(x){
