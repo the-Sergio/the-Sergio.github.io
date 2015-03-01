@@ -29,8 +29,8 @@ function setMaxPrice(price) {
 }
 
 function updateUI() {
-    $('#MaxPrice').html("Current funds: $" + mPrice.toFixed(2));
-    $('#BoxTotal').html("&nbsp;Lunchbox total: $" + totalPrice.toFixed(2));
+    $('#MaxPrice').html("Current funds: $" + Math.abs(mPrice).toFixed(2));
+    $('#BoxTotal').html("&nbsp;Lunchbox total: $" + Math.abs(totalPrice).toFixed(2));
     getUserLunchbox();
     getPriceTableUnder();
 }
@@ -42,7 +42,7 @@ function addFoodToLunchbox(description, id, price) {
 		data: {
 			"UID" : UID,
 			"Description" : description.replace('~', '\''),
-			"ID" : id,
+			"ID" : id.replace('~', '\''),
 			"Price" : price
 		},
 		success: function(result) {
@@ -63,7 +63,7 @@ function remFoodFromLunchbox(description, id, price) {
 		data: {
 			"UID" : UID,
 			"Description" : description.replace('~', '\''),
-			"ID" : id,
+			"ID" : id.replace('~', '\''),
 			"Price" : price
 		},
 		success: function(result) {
@@ -90,11 +90,11 @@ function getPriceTableUnder() {
                 {
                     if(i%2 == 0)
                     {
-                        test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
+                        test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id.replace('\'', '~') + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
                     }
                     else
                     {
-                        test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
+                        test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id.replace('\'', '~') + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
                     }
                 }
             test += "</table>";
@@ -115,9 +115,9 @@ function getUserLunchbox() {
 			var pageContent = "<table border = \"3\"><tr><td width=\"20%\">Location</td><td width=\"60%\">Item</td><td width=\"20%\">Price</td><td></td></tr>";
 			for(i = 0; i < result.length; i++) {
 				if(i%2 == 0) {
-					pageContent += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"remFoodFromLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Remove</button></td></tr>";
+					pageContent += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"remFoodFromLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id.replace('\'', '~') + "\',\'" + result[i].price + "\')\">Remove</button></td></tr>";
 				} else {
-					pageContent += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"remFoodFromLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Remove</button></td></tr>";
+					pageContent += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"remFoodFromLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id.replace('\'', '~') + "\',\'" + result[i].price + "\')\">Remove</button></td></tr>";
 				}
 			}
 			pageContent += "</table>";

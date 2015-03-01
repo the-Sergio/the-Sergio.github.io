@@ -65,7 +65,7 @@ public class AppTest
     //Jacob Test Case 2
     //Assignment 6
     public void testUID () {
-        LunchboxManager l = new LunchboxManager();
+        LunchboxManager l = LunchboxManager.getInstance();
         for (int i = 0; i < 100; i++) {
             String UID1 = l.makeUniqueId();
             String UID2 = l.makeUniqueId();

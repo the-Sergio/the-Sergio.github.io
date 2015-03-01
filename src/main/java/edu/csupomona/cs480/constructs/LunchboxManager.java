@@ -9,12 +9,21 @@ import java.util.Random;
  */
 public class LunchboxManager {
 
+    private static LunchboxManager INSTANCE;
+
     private HashMap<String, Lunchbox> lunchboxes;
     private Random r;
 
-    public LunchboxManager () {
+    private LunchboxManager () {
         lunchboxes = new HashMap<String, Lunchbox>();
         r = new Random();
+    }
+
+    public static LunchboxManager getInstance () {
+        if (INSTANCE == null) {
+            INSTANCE = new LunchboxManager();
+        }
+        return INSTANCE;
     }
 
     public void addLunchbox (String id, Lunchbox l) {

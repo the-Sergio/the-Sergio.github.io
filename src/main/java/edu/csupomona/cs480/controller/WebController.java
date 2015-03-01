@@ -1,18 +1,14 @@
 package edu.csupomona.cs480.controller;
 
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 import java.io.IOException;
 
 import edu.csupomona.cs480.constructs.Lunchbox;
-import edu.csupomona.cs480.data.provider.FSFoodManager;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import edu.csupomona.cs480.constructs.LunchboxManager;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailException;
@@ -31,11 +27,6 @@ import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.Food;
 import edu.csupomona.cs480.data.provider.FoodManager;
 import edu.princeton.cs.introcs.StdAudio;
-import org.springframework.web.servlet.View;
-import org.springframework.web.servlet.ViewResolver;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * This is the controller used by Spring framework.
@@ -59,8 +50,7 @@ public class WebController {
     @Autowired
     private FoodManager foodManager;
 
-    @Autowired
-    private LunchboxManager lunchboxManager;
+    private LunchboxManager lunchboxManager = LunchboxManager.getInstance();
 
     /**
      * This is a simple example of how the HTTP API works.
