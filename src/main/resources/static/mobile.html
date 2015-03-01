@@ -121,7 +121,7 @@
 				    <tr ng-repeat="x in names | orderBy: 'price' : flag | filter: { description: locationValue } | filter: showPrice | filter: { id : eValue } ">
 					<td>{{ x.description | uppercase }}</td>
 					<td>{{ x.id }}</td>
-					<td>{{ x.price }}</td>
+                        <td>{{ x.price.toFixed(2) }}</td>
 				    </tr>
 				</table>
 	
