@@ -50,7 +50,8 @@ public class WebController {
     @Autowired
     private FoodManager foodManager;
 
-    private LunchboxManager lunchboxManager = LunchboxManager.getInstance();
+    @Autowired
+    private LunchboxManager lunchboxManager;
 
     /**
      * This is a simple example of how the HTTP API works.

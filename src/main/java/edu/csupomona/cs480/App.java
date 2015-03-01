@@ -27,6 +27,11 @@ public class App {
         return foodManager;
     }
 
+    @Bean
+    public LunchboxManager lunchboxManager () {
+        return LunchboxManager.getInstance();
+    }
+
     /**
      * This is the running main method for the web application.
      * Please note that Spring requires that there is one and
