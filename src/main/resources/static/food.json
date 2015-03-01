@@ -71,11 +71,31 @@
 {"id":"Smoothie extra - energy","description":"Jamba Juice","price":"0.59"},
 {"id":"Smoothie extra - c & zinc","description":"Jamba Juice","price":"0.59"},
 {"id":"Smoothie extra - soy protein","description":"Jamba Juice","price":"0.59"},
-{"id":"1 Entr�e & Side","description":"Panda Express","price":"5.59"},
-{"id":"2 Entrees & Side","description":"Panda Express","price":"6.59"},
-{"id":"3 Entrees & Side","description":"Panda Express","price":"8.08"},
-{"id":"addtl. Premium entr�e(Single)","description":"Panda Express","price":"1.25"},
-{"id":"addtl. Premium entr�e(Large)","description":"Panda Express","price":"3.25"},
+  {
+    "id": "1 Entrée & Side",
+    "description": "Panda Express",
+    "price": "5.59"
+  },
+  {
+    "id": "2 Entrées & Side",
+    "description": "Panda Express",
+    "price": "6.59"
+  },
+  {
+    "id": "3 Entrées & Side",
+    "description": "Panda Express",
+    "price": "8.08"
+  },
+  {
+    "id": "addtl. Premium entrée(Single)",
+    "description": "Panda Express",
+    "price": "1.25"
+  },
+  {
+    "id": "addtl. Premium entrée(Large)",
+    "description": "Panda Express",
+    "price": "3.25"
+  },
 {"id":"Family Feast","description":"Panda Express","price":"29.00"},
 {"id":"A La Carte: Side (Single)","description":"Panda Express","price":"2.25"},
 {"id":"A La Carte: Side (Large)","description":"Panda Express","price":"3.25"},
@@ -90,9 +110,21 @@
 {"id":"Coffee (Small)","description":"Pete's Coffee & Tea","price":"1.90"},
 {"id":"Coffee (Medium)","description":"Pete's Coffee & Tea","price":"2.10"},
 {"id":"Coffee (Large)","description":"Pete's Coffee & Tea","price":"2.40"},
-{"id":"Caf� Au Late (Small)","description":"Pete's Coffee & Tea","price":"2.50"},
-{"id":"Caf� Au Late (Medium)","description":"Pete's Coffee & Tea","price":"2.70"},
-{"id":"Caf� Au Late (Large)","description":"Pete's Coffee & Tea","price":"3.00"},
+  {
+    "id": "Café Au Late (Small)",
+    "description": "Pete's Coffee & Tea",
+    "price": "2.50"
+  },
+  {
+    "id": "Café Au Late (Medium)",
+    "description": "Pete's Coffee & Tea",
+    "price": "2.70"
+  },
+  {
+    "id": "Café Au Late (Large)",
+    "description": "Pete's Coffee & Tea",
+    "price": "3.00"
+  },
 {"id":"Cappuccino (Small)","description":"Pete's Coffee & Tea","price":"3.00"},
 {"id":"Cappuccino (Medium)","description":"Pete's Coffee & Tea","price":"3.65"},
 {"id":"Cappuccino (Large)","description":"Pete's Coffee & Tea","price":"4.00"},

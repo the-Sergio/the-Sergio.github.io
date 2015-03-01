@@ -13,11 +13,10 @@ public class ResourceResolver {
     /**
      * Get the file used to store the user object JSON
      *
-     * @param foodId
      * @return
      */
     public static File getUserFile() {
-        File file = new File(BASE_DIR + "/" + "food-map.json");
+        File file = new File(BASE_DIR + "/" + "food-map-HASHMAP_VERSION.json");
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();
         }

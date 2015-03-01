@@ -43,7 +43,6 @@ public class FSFoodManager implements FoodManager {
 			// to the FoodMap object
 			try {
 				foodMap = JSON.readValue(userFile, FoodMap.class);
-				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -120,14 +119,12 @@ public class FSFoodManager implements FoodManager {
     public String foodToKey (Food f) {
         FoodMap fMap = getFoodMap();
         Set<String> keySet = fMap.keySet();
-        String[] keys = new String[keySet.size()];
-        keySet.toArray(keys);
-        for (int i = 0; i < keys.length; i++) {
-            Food test = fMap.get(keys[i]);
+        for (String key : keySet) {
+            Food test = fMap.get(key);
             if (test.getPrice().equals(f.getPrice())
                     && test.getId().equals(f.getId())
                     && test.getDescription().equals(f.getDescription())) {
-                return keys[i];
+                return key;
             }
         }
         System.out.println("Key doesn't exist for that item!");

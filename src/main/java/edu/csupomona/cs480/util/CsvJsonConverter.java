@@ -38,8 +38,8 @@ public class CsvJsonConverter {
 			//filewriter.print("\"" + strings[0] + "\":");
 			filewriter.print("{\"id\":\"" + strings[2] + "\",");
 			filewriter.print("\"description\":\"" + strings[1] + "\",");
-			filewriter.print("\"price\":" + strings[3] + "}");			
-			
+            filewriter.print("\"price\":" + strings[3] + "}");
+
 			// After line is read, peek at next char. If end of file, break.
 			// Else, read next line/item.
 			csvreader.mark(1);

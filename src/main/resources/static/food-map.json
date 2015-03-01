@@ -19,8 +19,16 @@
 {"id":"Water (20 oz)","description":"Bronco Bowl","price":1.49},
 {"id":"Sausage Egg & Cheese Biscuit (Biscuit)","description":"Carl's Jr","price":2.49},
 {"id":"Sausage Egg & Cheese Biscuit (Combo)","description":"Carl's Jr","price":4.09},
-{"id":"Bacon Egge & Cheese Biscuit (Biscuit)","description":"Carl's Jr","price":2.49},
-{"id":"Bacon Egge & Cheese Biscuit (Combo)","description":"Carl's Jr","price":4.09},
+  {
+    "id": "Bacon Egg & Cheese Biscuit (Biscuit)",
+    "description": "Carl's Jr",
+    "price": 2.49
+  },
+  {
+    "id": "Bacon Egg & Cheese Biscuit (Combo)",
+    "description": "Carl's Jr",
+    "price": 4.09
+  },
 {"id":"Monster Biscuit (Biscuit)","description":"Carl's Jr","price":3.59},
 {"id":"Monster Biscuit (Combo)","description":"Carl's Jr","price":5.19},
 {"id":"Loaded Omelet (Biscuit)","description":"Carl's Jr","price":2.49},
@@ -71,11 +79,31 @@
 {"id":"Smoothie extra - energy","description":"Jamba Juice","price":0.59},
 {"id":"Smoothie extra - c & zinc","description":"Jamba Juice","price":0.59},
 {"id":"Smoothie extra - soy protein","description":"Jamba Juice","price":0.59},
-{"id":"1 Entr�e & Side","description":"Panda Express","price":5.59},
-{"id":"2 Entrees & Side","description":"Panda Express","price":6.59},
-{"id":"3 Entrees & Side","description":"Panda Express","price":8.08},
-{"id":"addtl. Premium entr�e(Single)","description":"Panda Express","price":1.25},
-{"id":"addtl. Premium entr�e(Large)","description":"Panda Express","price":3.25},
+  {
+    "id": "1 Entrée & Side",
+    "description": "Panda Express",
+    "price": 5.59
+  },
+  {
+    "id": "2 Entrées & Side",
+    "description": "Panda Express",
+    "price": 6.59
+  },
+  {
+    "id": "3 Entrées & Side",
+    "description": "Panda Express",
+    "price": 8.08
+  },
+  {
+    "id": "addtl. Premium entrée(Single)",
+    "description": "Panda Express",
+    "price": 1.25
+  },
+  {
+    "id": "addtl. Premium entrée(Large)",
+    "description": "Panda Express",
+    "price": 3.25
+  },
 {"id":"Family Feast","description":"Panda Express","price":29.00},
 {"id":"A La Carte: Side (Single)","description":"Panda Express","price":2.25},
 {"id":"A La Carte: Side (Large)","description":"Panda Express","price":3.25},
@@ -90,15 +118,39 @@
 {"id":"Coffee (Small)","description":"Pete's Coffee & Tea","price":1.90},
 {"id":"Coffee (Medium)","description":"Pete's Coffee & Tea","price":2.10},
 {"id":"Coffee (Large)","description":"Pete's Coffee & Tea","price":2.40},
-{"id":"Caf� Au Late (Small)","description":"Pete's Coffee & Tea","price":2.50},
-{"id":"Caf� Au Late (Medium)","description":"Pete's Coffee & Tea","price":2.70},
-{"id":"Caf� Au Late (Large)","description":"Pete's Coffee & Tea","price":3.00},
+  {
+    "id": "Café Au Lait (Small)",
+    "description": "Pete's Coffee & Tea",
+    "price": 2.50
+  },
+  {
+    "id": "Café Au Lait (Medium)",
+    "description": "Pete's Coffee & Tea",
+    "price": 2.70
+  },
+  {
+    "id": "Café Au Lait (Large)",
+    "description": "Pete's Coffee & Tea",
+    "price": 3.00
+  },
 {"id":"Cappuccino (Small)","description":"Pete's Coffee & Tea","price":3.00},
 {"id":"Cappuccino (Medium)","description":"Pete's Coffee & Tea","price":3.65},
 {"id":"Cappuccino (Large)","description":"Pete's Coffee & Tea","price":4.00},
-{"id":"Caffe Mocha (Small)","description":"Pete's Coffee & Tea","price":3.50},
-{"id":"Caffe Mocha (Medium)","description":"Pete's Coffee & Tea","price":4.15},
-{"id":"Cafee Mocha (Large)","description":"Pete's Coffee & Tea","price":4.50},
+  {
+    "id": "Cafe Mocha (Small)",
+    "description": "Pete's Coffee & Tea",
+    "price": 3.50
+  },
+  {
+    "id": "Cafe Mocha (Medium)",
+    "description": "Pete's Coffee & Tea",
+    "price": 4.15
+  },
+  {
+    "id": "Cafe Mocha (Large)",
+    "description": "Pete's Coffee & Tea",
+    "price": 4.50
+  },
 {"id":"Americano (Small)","description":"Pete's Coffee & Tea","price":2.55},
 {"id":"Americano (Medium)","description":"Pete's Coffee & Tea","price":2.55},
 {"id":"Americano (Large)","description":"Pete's Coffee & Tea","price":3.30},

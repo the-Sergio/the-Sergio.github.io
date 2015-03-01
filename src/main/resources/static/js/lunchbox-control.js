@@ -78,36 +78,32 @@ function remFoodFromLunchbox(description, id, price) {
 }
 
 function getPriceTableUnder() {
-	if(mPrice){
-		$.ajax(
-			{
-				type : "GET",
-				url  : "/cs480/food/" + mPrice,
-				data : {
-			},
-			success : function(result) {
-				var test = "<table border = \"3\"><tr><td width=\"20%\">Location</td><td width=\"55%\">Item</td><td width=\"15%\">Price</td><td width=\"10%\"></td></tr>";
-				for(i = 0; i < result.length; i++)
-					{
-						if(i%2 == 0)
-						{
-							test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
-						}
-						else
-						{
-							test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
-						}
-					}
-				test += "</table>";
-				$('#Foods_Under').html(test);
-			},
-			error: function (jqXHR, exception) {
-				alert("Failed to get the price.");
-			}
-		});
-	} else {
-		alert("Invalid Price!");
-	}
+    $.ajax(
+        {
+            type : "GET",
+            url  : "/cs480/food/" + mPrice,
+            data : {
+        },
+        success : function(result) {
+            var test = "<table border = \"3\"><tr><td width=\"20%\">Location</td><td width=\"55%\">Item</td><td width=\"15%\">Price</td><td width=\"10%\"></td></tr>";
+            for(i = 0; i < result.length; i++)
+                {
+                    if(i%2 == 0)
+                    {
+                        test += "<tr bgcolor=\"#ccc\"><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
+                    }
+                    else
+                    {
+                        test += "<tr><td>" + result[i].description + "</td><td>" + result[i].id + "</td><td>$" + result[i].price + "</td><td><button onClick=\"addFoodToLunchbox(\'" + result[i].description.replace('\'', '~') + "\',\'" + result[i].id + "\',\'" + result[i].price + "\')\">Add</button></td></tr>";
+                    }
+                }
+            test += "</table>";
+            $('#Foods_Under').html(test);
+        },
+        error: function (jqXHR, exception) {
+            alert("Failed to get the price.");
+        }
+    });
 }
 
 function getUserLunchbox() {
@@ -133,16 +129,10 @@ function getUserLunchbox() {
     });
 }
 
-window.onbeforeunload = function () {
+window.onpagehide = function () {
     $.ajax({
         type: "DELETE",
         url: "/cs480/lunchbox/" + UID,
-        data: {},
-        success: function(result) {
-
-        },
-        error: function(jqXHR, exception) {
-            alert("Failed to get user lunchbox!");
-        }
+        data: {}
     });
 }
