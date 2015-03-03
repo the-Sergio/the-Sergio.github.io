@@ -51,14 +51,14 @@
 									<center>
 										<div ng-controller="customController" > 
 											Cost: $<input type="number" ng-model="cost" />
-											<div class="eat place" ng-show = 'inputCheck()'>
+											<div class="eat_place" ng-show = 'inputCheck()'>
 												Location: <input type="text" ng-model="locationValue" /> 
 											</div>
-											<div class="eat type" ng-show = 'inputCheck()'>
+											<div class="eat_type" ng-show = 'inputCheck()'>
 												I feel Like Eating: <input type="text" ng-model="eValue"/> 
 											</div>
 
-											<div ng-switch on="selected" ng-show = 'inputCheck()' ng-init="flag = true">
+											<div class="button1" ng-switch on="selected" ng-show = 'inputCheck()' ng-init="flag = true">
 												Sort by: <button ng-switch-when='true' ng-click='button1()'>$ High To Low</button>
 												<button ng-switch-when='false' ng-click='button2()'>$ Low to High</button>
 											</div>
@@ -77,6 +77,21 @@
 											</table>
 
 										</div>
+
+                              <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+                              <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow21.js"></script>
+                              <noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+            
+
+
+                              <style type="text/css">
+                                     div.eat_place { display:inline-block;}
+                                     div.eat_type { display:inline-block;}
+                                     div.button1 { display:inline-block;}
+                                     .clearBoth { clear:both; }
+                               </style>
+
+
 
 									<script>
 									function customController($scope,$http) {
