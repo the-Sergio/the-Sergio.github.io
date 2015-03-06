@@ -65,10 +65,5 @@ public class WebControllerTest {
 		assertTrue(result.getResponse().getContentLength() == 0);
 	}
 	
-	/*
-	@Test
-	public void addItemToLunchboxTest() throws Exception {
-		
-	}*/
 
 }
