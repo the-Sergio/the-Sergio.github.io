@@ -112,8 +112,8 @@ public class FSFoodManager implements FoodManager {
 		//Andy- uses the sortingManager class to sort 
 		//we can get creative with this when using a drop down menu
 		//future note => use Chaining method to sort
-		return sortingManager.highToLow(newList);
-	}
+        return sortingManager.lowToHigh(newList);
+    }
 
     //Takes a food item and returns the key in the hashmap that the food item is under
     public String foodToKey (Food f) {

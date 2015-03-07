@@ -18,18 +18,30 @@ import edu.csupomona.cs480.data.Food;
 public class SortingManager {
 
 	public List<Food> highToLow(List<Food> list){
-		Collections.sort(list, Ordering.natural().onResultOf(new Function<Food, Float>(){
+        Collections.sort(list, Ordering.natural().onResultOf(new Function<Food, Float>() {
 
-			@Override
-			public Float apply(Food arg0) {
-				return Float.parseFloat(arg0.getPrice());
-			}
-		}).reverse());
-		
-		return list;
+            @Override
+            public Float apply (Food arg0) {
+                return Float.parseFloat(arg0.getPrice());
+            }
+        }).reverse());
+
+        return list;
 	}
-	
-	//Example on how we can sort by different topics ...
+
+    public List<Food> lowToHigh (List<Food> list) {
+        Collections.sort(list, Ordering.natural().onResultOf(new Function<Food, Float>() {
+
+            @Override
+            public Float apply (Food arg0) {
+                return Float.parseFloat(arg0.getPrice());
+            }
+        }));
+
+        return list;
+    }
+
+    //Example on how we can sort by different topics ...
 	//I can sort by "sortBy" then sort by highToLow using Chaining
 	public List<Food> sortByChaining(List<Food> list, String sortBy){
 		
