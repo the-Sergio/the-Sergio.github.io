@@ -1,181 +1,500 @@
-1,Jamba Juice,Classic Smoothie (Strawberries Wild),4.49
-2,Jamba Juice,Classic Smoothie (Mango-A-Go-GO),4.49
-3,Jamba Juice,Classic Smoothie (Razzmatazz),4.49
-4,Jamba Juice,Classic Smoothie (Caribbean Passion),4.49
-5,Jamba Juice,Classic Smoothie (Orange-A-Peel),4.49
-6,Jamba Juice,All-Fruit Smoothie (Strawberry Whirl),4.89
-7,Jamba Juice,All-Fruit Smoothie (Mega Mango),4.89
-8,Jamba Juice,All-Fruit Smoothie (Orange Blast),4.89
-9,Jamba Juice,Smoothie extra - daily vitamin,0.59
-10,Jamba Juice,Smoothie extra - energy,0.59
-11,Jamba Juice,Smoothie extra - c & zinc,0.59
-12,Jamba Juice,Smoothie extra - soy protein,0.59
-13,Panda Express,1 Entrée & Side,5.59
-14,Panda Express,2 Entrees & Side,6.59
-15,Panda Express,3 Entrees & Side,8.08
-16,Panda Express,addtl. Premium entrée(Single),1.25
-17,Panda Express,addtl. Premium entrée(Large),3.25
-18,Panda Express,Family Feast,29.00
-19,Panda Express,A La Carte: Side (Single),2.25
-20,Panda Express,A La Carte: Side (Large),3.25
-21,Panda Express,A La Carte: Entree (Single),3.25
-22,Panda Express,A La Carte: Entree (Large),9.25
-23,Panda Express,Fountain Drink (Small),1.59
-24,Panda Express,Fountain Drink (Medium),1.79
-25,Panda Express,Fountain Drink (Large),1.99
-26,Panda Express,Water,1.79
-27,Panda Express,Juice,1.89
-28,Panda Express,Premium,2.09
-29,Starbucks (Marketplace),Coffee of the Day(Tall),1.65
-30,Starbucks (Marketplace),Coffee of the Day(Grande),2.10
-31,Starbucks (Marketplace),Coffee of the Day(Venti),2.35
-32,Starbucks (Marketplace),Tazo Hot Tea(Tall),1.95
-33,Starbucks (Marketplace),Tazo Hot Tea(Grande),2.15
-34,Starbucks (Marketplace),Tazo Hot Tea(Venti),2.45
-35,Starbucks (Marketplace),Tazo Chai(Tall),2.95
-36,Starbucks (Marketplace),Tazo Chai(Grande),3.65
-37,Starbucks (Marketplace),Tazo Chai(Venti),3.95
-38,Starbucks (Marketplace),Hot Chocolate(Tall),2.65
-39,Starbucks (Marketplace),Hot Chocolate(Grande),3.15
-40,Starbucks (Marketplace),Hot Chocolate(Venti),3.35
-41,Starbucks (Marketplace),Iced Coffee(Tall),1.95
-42,Starbucks (Marketplace),Iced Coffee(Grande),2.45
-43,Starbucks (Marketplace),Iced Coffee(Venti),2.95
-44,Starbucks (Marketplace),Tazo Iced Tea(Tall),1.50
-45,Starbucks (Marketplace),Tazo Iced Tea(Grande),2.15
-46,Starbucks (Marketplace),Tazo Iced Tea(Venti),2.65
-47,Starbucks (Marketplace),Iced Tazo Chai(Tall),2.95
-48,Starbucks (Marketplace),Iced Tazo Chai(Grande),3.65
-49,Starbucks (Marketplace),Iced Tazo Chai(Venti),3.95
-50,Starbucks (Marketplace),Iced Caffe Latte(Tall),2.75
-51,Starbucks (Marketplace),Iced Caffe Latte(Grande),3.55
-52,Starbucks (Marketplace),Iced Caffe Latte(Venti),4.15
-53,Starbucks (Marketplace),Iced Caramel Macchiato(Tall),3.95
-54,Starbucks (Marketplace),Iced Caramel Macchiato(Grande),4.45
-55,Starbucks (Marketplace),Iced Caramel Macchiato(Venti),4.95
-56,Starbucks (Marketplace),Iced Caffe Mocha(Tall),3.25
-57,Starbucks (Marketplace),Iced Caffe Mocha(Grande),4.05
-58,Starbucks (Marketplace),Iced Caffe Mocha(Venti),4.65
-59,Starbucks (Marketplace),Iced White Chocolate Mocha(Tall),3.95
-60,Starbucks (Marketplace),Iced White Chocolate Mocha(Grande),4.45
-61,Starbucks (Marketplace),Iced White Chocolate Mocha(Venti),4.75
-62,Starbucks (Marketplace),Coffee Frappuccino (Grande),3.75
-63,Starbucks (Marketplace),Caramel Frappuccino (Grande),4.25
-64,Starbucks (Marketplace),Mocha Frappuccino (Grande),4.25
-65,Starbucks (Marketplace),Vanilla Bean Frappuccino (Grande),3.75
-66,Starbucks (Marketplace),Strawberries & Creme Frappuccino (Grande),4.25
-67,Starbucks (Marketplace),Caramel Macchicato(Tall),3.95
-68,Starbucks (Marketplace),Caramel Macchicato(Grande),4.45
-69,Starbucks (Marketplace),Caramel Macchicato(Venti),4.75
-70,Starbucks (Marketplace),Caffe Mocha(Tall),3.45
-71,Starbucks (Marketplace),Caffe Mocha(Grande),4.15
-72,Starbucks (Marketplace),Caffe Mocha(Venti),4.65
-73,Starbucks (Marketplace),White Chocolate Mocha(Tall),3.95
-74,Starbucks (Marketplace),White Chocolate Mocha(Grande),4.45
-75,Starbucks (Marketplace),White Chocolate Mocha(Venti),4.75
-76,Starbucks (Marketplace),Caffe Latte(Tall),2.75
-77,Starbucks (Marketplace),Caffe Latte(Grande),3.65
-78,Starbucks (Marketplace),Caffe Latte(Venti),4.15
-79,Starbucks (Marketplace),Cappuccino(Tall),2.95
-80,Starbucks (Marketplace),Cappuccino(Grande),3.65
-81,Starbucks (Marketplace),Cappuccino(Venti),4.15
-82,Starbucks (Marketplace),Caffe Americano(Tall),2.25
-83,Starbucks (Marketplace),Caffe Americano(Grande),2.65
-84,Starbucks (Marketplace),Caffe Americano(Venti),2.95
-85,Starbucks (Marketplace),Espresso (solo),1.75
-86,Starbucks (Marketplace),Espresso (doppio),1.95
-87,Starbucks (Marketplace),Espresso extra - Espresso Shot,0.80
-88,Starbucks (Marketplace),Espresso extra - Organic Soymilk,0.50
-89,Starbucks (Marketplace),Espresso extra - Flavor,0.50
-90,Starbucks (Marketplace),Assorted Muffins,2.50
-91,Starbucks (Marketplace),Muffin Tops,1.19
-92,Starbucks (Marketplace),Assorted Pastries,2.25
-93,Starbucks (Marketplace),Bagels,1.10
-94,Starbucks (Marketplace),Bagel & Cream Cheese,1.79
-95,Qdoba,Queso Burrito (grilled chicken),7.69
-96,Qdoba,Queso Burrito (grilled steak),8.79
-97,Qdoba,Fajita Ranchera Burrito (grilled chicken),7.69
-98,Qdoba,Fajita Ranchera Burrito (steak),7.69
-99,Qdoba,Custom burrito (grilled chicken),6.89
-100,Qdoba,Custom burrito (pulled pork),7.19
-101,Qdoba,Custom burrito (grilled steak),7.59
-102,Qdoba,Custom burrito (vegetarian with guacamole),6.89
-103,Qdoba,burrito additions: 3-cheese queso,1.19
-104,Qdoba,burrito additions: hand-smashed guacamole,1.49
-105,Qdoba,burrito additions: fajita veggies,0.79
-106,Qdoba,Grilled Quesadilla (cheese),7.89
-107,Qdoba,Grilled Quesadilla (grilled chicken),7.89
-108,Qdoba,Taco Salad (grilled chicken),7.19
-109,Qdoba,Taco Salad (grilled steak),7.99
-110,Qdoba,3-Cheese Nachos (grilled chicken),7.49
-111,Qdoba,3-Cheese Nachos (grilled steak),8.29
-112,Qdoba,Tacos (grilled chicken),7.19
-113,Qdoba,Tacos (grilled steak),7.99
-114,Qdoba,Tacos (pulled pork),7.69
-115,Qdoba,Tortilla Chips (3-Cheese Queso),4.39
-116,Qdoba,Tortilla Chips (Salsa),1.09
-117,Qdoba,Tortilla Chips (Salsa),2.19
-118,Qdoba,Tortilla Chips (Hand-Smashed Guacamole),3.29
-119,Qdoba,Fountain Drink (Medium),1.69
-120,Qdoba,Fountain Drink (Large),1.89
-121,Qdoba,Bottled Water,1.49
-122,Bronco Bowl,Rice Bowl (Chicken Teriyaki - dark meat),5.99
-123,Bronco Bowl,Rice Bowl (Chicken Teriyaki - white meat),6.59
-124,Bronco Bowl,Rice Bowl (salmon),8.99
-125,Bronco Bowl,Rice Bowl (bbq beef),7.99
-126,Bronco Bowl,Rice Bowl (chicken katsu),7.49
-127,Bronco Bowl,Rice Bowl (veggie),5.99
-128,Bronco Bowl,Chicken Soup,5.99
-129,Bronco Bowl,Miso Soup,2.49
-130,Bronco Bowl,Veggie Soup,5.99
-131,Bronco Bowl,Udon Soup,5.99
-132,Bronco Bowl,Soup extra - sub white meat,0.50
-133,Bronco Bowl,Soup extra - add meat,2.00
-134,Bronco Bowl,Assorted Sushi,5.29
-135,Bronco Bowl,Fountain Drink (24 oz),1.69
-136,Bronco Bowl,Fountain Drink (32  oz),1.89
-137,Bronco Bowl,Green tea (24 oz),1.69
-138,Bronco Bowl,Green Tea (32 oz),1.89
-139,Bronco Bowl,Water (20 oz),1.49
-140,Carl's Jr,Sausage Egg & Cheese Biscuit (Biscuit),2.49
-141,Carl's Jr,Sausage Egg & Cheese Biscuit (Combo),4.09
-142,Carl's Jr,Bacon Egge & Cheese Biscuit (Biscuit),2.49
-143,Carl's Jr,Bacon Egge & Cheese Biscuit (Combo),4.09
-144,Carl's Jr,Monster Biscuit (Biscuit),3.59
-145,Carl's Jr,Monster Biscuit (Combo),5.19
-146,Carl's Jr,Loaded Omelet (Biscuit),2.49
-147,Carl's Jr,Loaded Omelet (Combo),4.59
-148,Carl's Jr,Hearty Breakfast Platter (Each),3.19
-149,Carl's Jr,Hearty Breakfast Platter (Combo),4.79
-150,Carl's Jr,Biscuit N Gravy (Biscuit),1.59
-151,Carl's Jr,Biscuit N Gravy (Combo),3.69
-152,Carl's Jr,Breakfast Burger (Each),4.29
-153,Carl's Jr,Breakfast Burger (Combo),5.99
-154,Carl's Jr,Sourdough Breakfast (Biscuit),3.59
-155,Carl's Jr,Sourdough Breakfast (Combo),5.69
-156,Carl's Jr,Steak & Egg Breakfast Burrito (Each),3.99
-157,Carl's Jr,Steak & Egg Breakfast Burrito (Combo),6.19
-158,Carl's Jr,Loaded Breakfast Burrito (Each),3.79
-159,Carl's Jr,Loaded Breakfast Burrito (Combo),5.99
-160,Carl's Jr,Big Country Breakfast Burrito (Each),3.59
-161,Carl's Jr,Big Country Breakfast Burrito (Combo),5.79
-162,Carl's Jr,Made From Scratch Biscuit (Each),1.09
-163,Carl's Jr,Made From Scratch Biscuit (6-Pack),3.79
-164,Carl's Jr,Bacon & Egg Burrito (Each),3.19
-165,Carl's Jr,Bacon & Egg Burrito (Combo),5.09
-166,Carl's Jr,Hash Brown Nuggest (Small),1.69
-167,Carl's Jr,Hash Brown Nuggest (Medium),1.89
-168,Carl's Jr,Hash Brown Nuggest (Large),2.09
-169,Carl's Jr,Coffee  (Small),1.69
-170,Carl's Jr,Coffee (Medium),1.99
-171,Carl's Jr,Coffee (Large),2.19
-172,Carl's Jr,Orange Juice,1.99
-173,Carl's Jr,The Big Carl (Sandwich),4.29
-174,Carl's Jr,The Big Carl (Combo),6.99
-175,Carl's Jr,CrissCut Fries,2.79
-176,Carl's Jr,Onion Rings,2.79
-177,Carl's Jr,Fried Zucchini,2.79
-178,Carl's Jr,Natural Cut Fries (Small),2.09
-179,Carl's Jr,Natural Cut Fries (Medium),2.39
-180,Carl's Jr,Natural Cut Fries (Large),2.69
-181,Carl's Jr,Hand Scooped Shake,3.59
+1,Bronco Bowl,Rice Bowl (Chicken Teriyaki - dark meat),5.99
+2,Bronco Bowl,Rice Bowl (Chicken Teriyaki - white meat),6.59
+3,Bronco Bowl,Rice Bowl (salmon),8.99
+4,Bronco Bowl,Rice Bowl (bbq beef),7.99
+5,Bronco Bowl,Rice Bowl (chicken katsu),7.49
+6,Bronco Bowl,Rice Bowl (veggie),5.99
+7,Bronco Bowl,Chicken Soup,5.99
+8,Bronco Bowl,Miso Soup,2.49
+9,Bronco Bowl,Veggie Soup,5.99
+10,Bronco Bowl,Udon Soup,5.99
+11,Bronco Bowl,Soup extra - sub white meat,0.50
+12,Bronco Bowl,Soup extra - add meat,2.00
+13,Bronco Bowl,Assorted Sushi,5.29
+14,Bronco Bowl,Fountain Drink (24 oz),1.69
+15,Bronco Bowl,Fountain Drink (32  oz),1.89
+16,Bronco Bowl,Green tea (24 oz),1.69
+17,Bronco Bowl,Green Tea (32 oz),1.89
+18,Bronco Bowl,Water (20 oz),1.49
+19,Carl's Jr,Sausage Egg & Cheese Biscuit (Biscuit),2.49
+20,Carl's Jr,Sausage Egg & Cheese Biscuit (Combo),4.09
+21,Carl's Jr,Bacon Egg & Cheese Biscuit (Biscuit),2.49
+22,Carl's Jr,Bacon Egg & Cheese Biscuit (Combo),4.09
+23,Carl's Jr,Monster Biscuit (Biscuit),3.59
+24,Carl's Jr,Monster Biscuit (Combo),5.19
+25,Carl's Jr,Loaded Omelet (Biscuit),2.49
+26,Carl's Jr,Loaded Omelet (Combo),4.59
+27,Carl's Jr,Hearty Breakfast Platter (Each),3.19
+28,Carl's Jr,Hearty Breakfast Platter (Combo),4.79
+29,Carl's Jr,Biscuit N Gravy (Biscuit),1.59
+30,Carl's Jr,Biscuit N Gravy (Combo),3.69
+31,Carl's Jr,Breakfast Burger (Each),4.29
+32,Carl's Jr,Breakfast Burger (Combo),5.99
+33,Carl's Jr,Sourdough Breakfast (Biscuit),3.59
+34,Carl's Jr,Sourdough Breakfast (Combo),5.69
+35,Carl's Jr,Steak & Egg Breakfast Burrito (Each),3.99
+36,Carl's Jr,Steak & Egg Breakfast Burrito (Combo),6.19
+37,Carl's Jr,Loaded Breakfast Burrito (Each),3.79
+38,Carl's Jr,Loaded Breakfast Burrito (Combo),5.99
+39,Carl's Jr,Big Country Breakfast Burrito (Each),3.59
+40,Carl's Jr,Big Country Breakfast Burrito (Combo),5.79
+41,Carl's Jr,Made From Scratch Biscuit (Each),1.09
+42,Carl's Jr,Made From Scratch Biscuit (6-Pack),3.79
+43,Carl's Jr,Bacon & Egg Burrito (Each),3.19
+44,Carl's Jr,Bacon & Egg Burrito (Combo),5.09
+45,Carl's Jr,Hash Brown Nuggets (Small),1.69
+46,Carl's Jr,Hash Brown Nuggets (Medium),1.89
+47,Carl's Jr,Hash Brown Nuggets (Large),2.09
+48,Carl's Jr,Coffee  (Small),1.69
+49,Carl's Jr,Coffee (Medium),1.99
+50,Carl's Jr,Coffee (Large),2.19
+51,Carl's Jr,Orange Juice,1.99
+52,Carl's Jr,The Big Carl (Sandwich),4.29
+53,Carl's Jr,The Big Carl (Combo),6.99
+54,Carl's Jr,CrissCut Fries,2.79
+55,Carl's Jr,Onion Rings,2.79
+56,Carl's Jr,Fried Zucchini,2.79
+57,Carl's Jr,Natural Cut Fries (Small),2.09
+58,Carl's Jr,Natural Cut Fries (Medium),2.39
+59,Carl's Jr,Natural Cut Fries (Large),2.69
+60,Carl's Jr,Hand Scooped Shake,3.59
+61,Dennys,Original Grand Slam,5.99
+62,Dennys,The Grand Slamwich,5.69
+63,Dennys,Omelettes,5.49
+64,Dennys,Texas Prime Rib & Egg Sandwich,5.99
+65,Dennys,Chipotle Prime Rib Breakfast Burrito,6.49
+66,Dennys,Veggie Fajita Breakfast Burrito,4.99
+67,Dennys,Breakfast Scramble Burger,6.99
+68,Dennys,Denver Scramble Burger,6.99
+69,Dennys,Huevos Crunch Burger,6.99
+70,Dennys,The Den Burger,5.29
+71,Dennys,The Double Den Burger,6.99
+72,Dennys,Mushroom Swiss Burger,5.99
+73,Dennys,Bacon Cheeseburger,5.99
+74,Dennys,Cali Jack Chicken Burger,5.49
+75,Dennys,Veggie Mash Up Burger,4.99
+76,Dennys,The Chili Billy Burger,6.49
+77,Dennys,Fried Cheese Melt,4.99
+78,Dennys,Frisco Melt,5.99
+79,Dennys,Bacon Pepper Jack Melt,4.99
+80,Dennys,Guacamole Chicken Burrito,5.49
+81,Dennys,Prime Rib Burrito,6.49
+82,Dennys,Veggie Mash Up Burrito,5.69
+83,Dennys,Grilled Chicken Panini,5.49
+84,Dennys,Prime Rib Cheesesteak,6.49
+85,Dennys,Bacon Ranch Chicken Salad Sandwich,5.49
+86,Dennys,Southwestern Chicken Salad,5.99
+87,Dennys,Pecan Cranberry Chicken Salad,5.99
+88,Dennys,Garden Salad,4.29
+89,Dennys,Dippable Veggies,4.29
+90,Dennys,Yogurt Parfait,3.99
+91,Dennys,Fruit Cup,2.99
+92,Dennys,Mozzarella Cheese Sticks (5pc),3.99
+93,Dennys,Mozzarella Cheese Sticks (8pc),4.99
+94,Dennys,Chicken Strips (3pc),4.49
+95,Dennys,Chicken Strips (5pc),5.99
+96,Dennys,Fried Green Beans,3.49
+97,Dennys,Pretzel Bites,3.49
+98,Dennys,Onion Rings,3.49
+99,Dennys,Fresh Brewed Coffee,1.89
+100,Dennys,Fountain Soft Drinks,1.99
+101,Dennys,Hand Mixed Shake,3.99
+102,Dennys,Fruit Smoothie,3.59
+103,Fresh Escape,Soup (Small),2.59
+104,Fresh Escape,Soup (Medium),3.99
+105,Fresh Escape,Soup (Large),4.99
+106,Fresh Escape,Bread Bowl,5.29
+107,Fresh Escape,Salad (per ounce),0.49
+108,Fresh Escape,Side (corn bread mini muffins),0.79
+109,Fresh Escape,Side (fresh fruit),0.69
+110,Fresh Escape,Lipton Pure Leaf Tea,1.89
+111,Fresh Escape,Water (20 oz),1.45
+112,Jamba Juice,Classic Smoothie (Strawberries Wild),4.49
+113,Jamba Juice,Classic Smoothie (Mango-A-Go-GO),4.49
+114,Jamba Juice,Classic Smoothie (Razzmatazz),4.49
+115,Jamba Juice,Classic Smoothie (Caribbean Passion),4.49
+116,Jamba Juice,Classic Smoothie (Orange-A-Peel),4.49
+117,Jamba Juice,All-Fruit Smoothie (Strawberry Whirl),4.89
+118,Jamba Juice,All-Fruit Smoothie (Mega Mango),4.89
+119,Jamba Juice,All-Fruit Smoothie (Orange Blast),4.89
+120,Jamba Juice,Smoothie extra - daily vitamin,0.59
+121,Jamba Juice,Smoothie extra - energy,0.59
+122,Jamba Juice,Smoothie extra - c & zinc,0.59
+123,Jamba Juice,Smoothie extra - soy protein,0.59
+124,Panda Express,1 entree & Side,5.59
+125,Panda Express,2 entrees & Side,6.59
+126,Panda Express,3 Eentrees & Side,8.08
+127,Panda Express,addtl Premium entree(Single),1.25
+128,Panda Express,addtl Premium entree(Large),3.25
+129,Panda Express,Family Feast,29.00
+130,Panda Express,A La Carte: Side (Single),2.25
+131,Panda Express,A La Carte: Side (Large),3.25
+132,Panda Express,A La Carte: Entree (Single),3.25
+133,Panda Express,A La Carte: Entree (Large),9.25
+134,Panda Express,Fountain Drink (Small),1.59
+135,Panda Express,Fountain Drink (Medium),1.79
+136,Panda Express,Fountain Drink (Large),1.99
+137,Panda Express,Water,1.79
+138,Panda Express,Juice,1.89
+139,Panda Express,Premium,2.09
+140,Pete's Coffee & Tea,Coffee (Small),1.90
+141,Pete's Coffee & Tea,Coffee (Medium),2.10
+142,Pete's Coffee & Tea,Coffee (Large),2.40
+143,Pete's Coffee & Tea,Café Au Late (Small),2.50
+144,Pete's Coffee & Tea,Café Au Late (Medium),2.70
+145,Pete's Coffee & Tea,Café Au Late (Large),3.00
+146,Pete's Coffee & Tea,Cappuccino (Small),3.00
+147,Pete's Coffee & Tea,Cappuccino (Medium),3.65
+148,Pete's Coffee & Tea,Cappuccino (Large),4.00
+149,Pete's Coffee & Tea,Caffe Mocha (Small),3.50
+150,Pete's Coffee & Tea,Caffe Mocha (Medium),4.15
+151,Pete's Coffee & Tea,Cafee Mocha (Large),4.50
+152,Pete's Coffee & Tea,Americano (Small),2.55
+153,Pete's Coffee & Tea,Americano (Medium),2.55
+154,Pete's Coffee & Tea,Americano (Large),3.30
+155,Pete's Coffee & Tea,Espresso (Small),1.80
+156,Pete's Coffee & Tea,Espresso (Medium),2.55
+157,Pete's Coffee & Tea,Espresso (Large),3.30
+158,Pete's Coffee & Tea,Hot Tea By The Cup (Small),2.15
+159,Pete's Coffee & Tea,Hot Tea By The Cup  (Medium),2.50
+160,Pete's Coffee & Tea,Hot Tea By The Cup  (Large),3.15
+161,Pete's Coffee & Tea,Masala Chai Tea Latte (Small),3.20
+162,Pete's Coffee & Tea,Masala Chai Tea Latte (Medium),3.85
+163,Pete's Coffee & Tea,Masala Chai Tea Latte (Large),4.20
+164,Pete's Coffee & Tea,Hot Cocoa (Small),2.75
+165,Pete's Coffee & Tea,Hot Cocoa (Medium),3.25
+166,Pete's Coffee & Tea,Hot Cocoa (Large),3.55
+167,Pete's Coffee & Tea,Iced Coffee (Medium),2.45
+168,Pete's Coffee & Tea,Iced Coffee (Large),2.75
+169,Pete's Coffee & Tea,Iced Coffee Latte (Medium),3.65
+170,Pete's Coffee & Tea,Iced Coffee Latte (Large),4.00
+171,Pete's Coffee & Tea,Iced Coffee Mocha (Medium),4.15
+172,Pete's Coffee & Tea,Iced Coffee Mocha (Large),4.50
+173,Pete's Coffee & Tea,Iced Americano (Medium),2.55
+174,Pete's Coffee & Tea,Iced Americano (Large),3.30
+175,Pete's Coffee & Tea,Peet's Iced Tea (Medium),2.25
+176,Pete's Coffee & Tea,Peet's Iced Tea (Large),2.55
+177,Pete's Coffee & Tea,Latte Frio (Medium),3.80
+178,Pete's Coffee & Tea,Latte Frio (Large),4.30
+179,Pete's Coffee & Tea,Mocha Frio (Medium),4.30
+180,Pete's Coffee & Tea,Mocha Frio (Large),4.80
+181,Pete's Coffee & Tea,White Chocolate or Caramel Frio (Medium),4.30
+182,Pete's Coffee & Tea,White Chocolate or Caramel Frio (Large),4.80
+183,Pete's Coffee & Tea,Peet's Joe to Go (serves 12),16.99
+184,Pete's Coffee & Tea,Yogurt (Small),2.69
+185,Pete's Coffee & Tea,Yogurt (Regular),3.29
+186,Pete's Coffee & Tea,Yogurt with up to 3 toppings (Small),3.69
+187,Pete's Coffee & Tea,Yogurt with up to 3 toppings (Regular),4.29
+188,Pete's Coffee & Tea,Waffle Cone (Regular),2.29
+189,Pete's Coffee & Tea,Waffle Cone with 1 topping (Regular),2.98
+190,Pete's Coffee & Tea,Cake Cone (Regular),1.79
+191,Pete's Coffee & Tea,Fro-Yo Blast,3.99
+192,Pete's Coffee & Tea,Indulgent Shakes,3.49
+193,Pete's Coffee & Tea,Smoothie (Small),3.99
+194,Pete's Coffee & Tea,Smoothie (Regular),4.79
+195,Pete's Coffee & Tea,Smoothie (Large),6.09
+196,Pete's Coffee & Tea,Smoothie Booster (extra),0.69
+197,Pete's Coffee & Tea,High-Performance smoothie (Small),4.39
+198,Pete's Coffee & Tea,High-Performance smoothie (Regular),5.19
+199,Pete's Coffee & Tea,High-Performance smoothie (Large),6.49
+200,Pete's Coffee & Tea,Protein Power-Up smoothie (Regular),6.29
+201,Pete's Coffee & Tea,Protein Power-Up smoothie (Large),7.49
+202,Qdoba,Queso Burrito (grilled chicken),7.69
+203,Qdoba,Queso Burrito (grilled steak),8.79
+204,Qdoba,Fajita Ranchera Burrito (grilled chicken),7.69
+205,Qdoba,Fajita Ranchera Burrito (steak),7.69
+206,Qdoba,Custom burrito (grilled chicken),6.89
+207,Qdoba,Custom burrito (pulled pork),7.19
+208,Qdoba,Custom burrito (grilled steak),7.59
+209,Qdoba,Custom burrito (vegetarian with guacamole),6.89
+210,Qdoba,burrito additions: 3-cheese queso,1.19
+211,Qdoba,burrito additions: hand-smashed guacamole,1.49
+212,Qdoba,burrito additions: fajita veggies,0.79
+213,Qdoba,Grilled Quesadilla (cheese),7.89
+214,Qdoba,Grilled Quesadilla (grilled chicken),7.89
+215,Qdoba,Taco Salad (grilled chicken),7.19
+216,Qdoba,Taco Salad (grilled steak),7.99
+217,Qdoba,3-Cheese Nachos (grilled chicken),7.49
+218,Qdoba,3-Cheese Nachos (grilled steak),8.29
+219,Qdoba,Tacos (grilled chicken),7.19
+220,Qdoba,Tacos (grilled steak),7.99
+221,Qdoba,Tacos (pulled pork),7.69
+222,Qdoba,Tortilla Chips (3-Cheese Queso),4.39
+223,Qdoba,Tortilla Chips (Salsa),1.09
+224,Qdoba,Tortilla Chips (Salsa),2.19
+225,Qdoba,Tortilla Chips (Hand-Smashed Guacamole),3.29
+226,Qdoba,Fountain Drink (Medium),1.69
+227,Qdoba,Fountain Drink (Large),1.89
+228,Qdoba,Bottled Water,1.49
+229,Round Table Pizza,Wings (6pc),5.49
+230,Round Table Pizza,Wings (12pc),8.99
+231,Round Table Pizza,Soft Drink (20 oz),1.69
+232,Round Table Pizza,Soft Drink (32 oz),1.89
+233,Round Table Pizza,Soft Drink (2 Liter),2.99
+234,Round Table Pizza,20z Pepsi Bottle,1.79
+235,Round Table Pizza,Aquafina,1.49
+236,Round Table Pizza,Beer (Domestic),3.25
+237,Round Table Pizza,Beer (Import),4.25
+238,Round Table Pizza,Wine,4.25
+239,Round Table Pizza,Fudge Brownie Squares,2.25
+240,Round Table Pizza,Lemon Bar,2.25
+241,Round Table Pizza,Speciality Sandwich,6.99
+242,Round Table Pizza,Lunch Special Combo,8.49
+243,Round Table Pizza,Garlic Parmesan Twists (6pc),5.99
+244,Round Table Pizza,Garlic Parmesan Twists (3pc),3.99
+245,Round Table Pizza,Buffalo Wings (6pc),5.49
+246,Round Table Pizza,Buffalo Wings (12pc),8.99
+247,Round Table Pizza,Gourmet Sandwich,6.99
+248,Round Table Pizza,Salad (Small),6.49
+249,Round Table Pizza,Salad (Large),8.49
+250,Round Table Pizza,One Topping Personal pizza combo (#1),10.99
+251,Round Table Pizza,Gourmet Sandwich combo (#2),8.49
+252,Round Table Pizza,One Topping Personal pizza combo (#3),6.49
+253,Round Table Pizza,Six Buffalo Wings combo (#4),11.99
+254,Round Table Pizza,3 Piece Twists combo (#5),8.99
+255,Round Table Pizza,Speciality Personal Pan pizza combo (#6),8.59
+256,Round Table Pizza,Hawaiian Personal Pan pizza combo (#7),7.59
+257,Round Table Pizza,Pizza (Personal) (1 Topping or cheese),6.59
+258,Round Table Pizza,Pizza (Medium) (1 Topping or cheese),16.59
+259,Round Table Pizza,Pizza (Large) (1 Topping or cheese),18.99
+260,Round Table Pizza,Additional topic (Personal),0.79
+261,Round Table Pizza,Additional topic (Medium),2.09
+262,Round Table Pizza,Additional topic (Large),2.35
+263,Round Table Pizza,Speciality pizza (Personal),8.59
+264,Round Table Pizza,Speciality pizza (Medium),19.99
+265,Round Table Pizza,Speciality pizza (Large),22.99
+266,Round Table Pizza,Speciality pizza (Hawaiian) (Personal),7.59
+267,Round Table Pizza,Speciality pizza (Hawaiian) (Medium),18.69
+268,Round Table Pizza,Speciality pizza (Hawaiian) (Large),24.19
+269,Round Table Pizza,Speciality pizza (Veggie) (Personal),8.59
+270,Round Table Pizza,Speciality pizza (Veggie) (Medium),19.99
+271,Round Table Pizza,Speciality pizza (Veggie) (Large),22.99
+272,Starbucks,Classic Coffee Cake,2.45
+273,Starbucks,Scone,2.45
+274,Starbucks,Old-Fashioned Glazed Doughnut,1.75
+275,Starbucks,Blueberry Muffin,2.25
+276,Starbucks,Oatmeal Cookie,1.95
+277,Starbucks,Chocolate Chip Cookie,1.95
+278,Starbucks,Double Chocolate Chunk Brownie,2.45
+279,Starbucks,Salted Caramel Tart,2.95
+280,Starbucks,Michigan Cherry Oat Bar,1.95
+281,Starbucks,Cake Pops,1.75
+282,Starbucks,Butter Croissant,2.25
+283,Starbucks,Chocolate Croissant,2.45
+284,Starbucks,Cheese Danish,2.45
+285,Starbucks,Sliced Loaves,2.45
+286,Starbucks,Savory Squares,3.45
+287,Starbucks,Slow-Roasted Ham & Swiss sandwich,4.45
+288,Starbucks,Vegetable & Fontiago sandwich,4.45
+289,Starbucks,Bacon & Gouda sandwich,3.75
+290,Starbucks,Sausage & Cheddar sandwich,3.25
+291,Starbucks,Egg & Cheddar sandwich,2.95
+292,Starbucks,Reduced-Fat Turkey Bacon sandwich,3.45
+293,Starbucks,Spinach & Feta Wrap,3.45
+294,Starbucks,Old-Fashioned Grilled Cheese sandwich,5.25
+295,Starbucks,Turkey Pesto sandwich,5.95
+296,Starbucks,Ham & Swiss sandwich,5.65
+297,Starbucks,Chicken Santa Fe sandwich,5.65
+298,Starbucks,Roasted Tomato & Mozzarella sandwich,5.45
+299,Starbucks,Kettle Potato Chips,1.50
+300,Starbucks,Butter Popcorn,1.25
+301,Starbucks,Peter Rabbit Organics,2.25
+302,Starbucks,That's It Fruit Bar,1.95
+303,Starbucks,Evolution Harvest Nuts,2.25
+304,Starbucks,Peeled Snacks,2.45
+305,Starbucks,Tiramisu Cappuccino (Tall),4.25
+306,Starbucks,Tiramisu Cappuccino (Grande),4.75
+307,Starbucks,Tiramisu Cappuccino (Venti),5.25
+308,Starbucks,Caramel Flan Cappuccino (Tall),4.25
+309,Starbucks,Caramel Flan Cappuccino (Grande),4.75
+310,Starbucks,Caramel Flan Cappuccino (Venti),5.25
+311,Starbucks,Caramel Cappuccino (Tall),3.95
+312,Starbucks,Caramel Cappuccino (Grande),4.65
+313,Starbucks,Caramel Cappuccino (Venti),4.95
+314,Starbucks,Mocha Cappuccino (Tall),3.95
+315,Starbucks,Mocha Cappuccino (Grande),4.65
+316,Starbucks,Mocha Cappuccino (Venti),4.95
+317,Starbucks,Coffee Cappuccino (Tall),3.25
+318,Starbucks,Coffee Cappuccino (Grande),3.95
+319,Starbucks,Coffee Cappuccino (Venti),4.45
+320,Starbucks,Java Chip Cappuccino (Tall),3.95
+321,Starbucks,Java Chip Cappuccino (Grande),4.65
+322,Starbucks,Java Chip Cappuccino (Venti),4.95
+323,Starbucks,Vanilla Bean Creme Cappuccino (Tall),3.25
+324,Starbucks,Vanilla Bean Creme Cappuccino (Grande),3.95
+325,Starbucks,Vanilla Bean Creme Cappuccino (Venti),4.45
+326,Starbucks,Double Chocolaty Chip Cappuccino (Tall),3.95
+327,Starbucks,Double Chocolaty Chip Cappuccino (Grande),4.65
+328,Starbucks,Double Chocolaty Chip Cappuccino (Venti),4.95
+329,Starbucks,Smoothie,4.25
+330,Starbucks,Starbucks Refresher Iced Beverage (Tall),2.95
+331,Starbucks,Starbucks Refresher Iced Beverage (Grande),3.45
+332,Starbucks,Starbucks Refresher Iced Beverage (Venti),3.95
+333,Starbucks,Starbucks Refresher Iced Beverage (Trenta),4.45
+334,Starbucks,Flat White Espresso (Tall),3.75
+335,Starbucks,Cappuccino Espresso (Tall),2.95
+336,Starbucks,Cappuccino Espresso (Grande),3.65
+337,Starbucks,Cappuccino Espresso (Venti),4.15
+338,Starbucks,Caffe Latte Espresso (Tall),2.95
+339,Starbucks,Caffe Latte Espresso (Grande),3.65
+340,Starbucks,Caffe Latte Espresso (Venti),4.15
+341,Starbucks,Caffe Americano Espresso (Tall),2.25
+342,Starbucks,Caffe Americano Espresso (Grande),2.65
+343,Starbucks,Caffe Americano Espresso (Venti),2.95
+344,Starbucks,Vanilla Latte Espresso (Tall),3.45
+345,Starbucks,Vanilla Latte Espresso (Grande),4.15
+346,Starbucks,Vanilla Latte Espresso (Venti),4.65
+347,Starbucks,Caffe Mocha Espresso (Tall),3.45
+348,Starbucks,Caffe Mocha Espresso (Grande),4.15
+349,Starbucks,Caffe Mocha Espresso (Venti),4.65
+350,Starbucks,Espresso (Tall),1.75
+351,Starbucks,Espresso (Grande),1.95
+352,Starbucks,Espresso Macchiato (Tall),1.85
+353,Starbucks,Espresso Macchiato (Grande),2.05
+354,Starbucks,Tiramisu Latte Espresso (Tall),4.15
+355,Starbucks,Tiramisu Latte Espresso (Grande),4.75
+356,Starbucks,Tiramisu Latte Espresso (Venti),4.95
+357,Starbucks,Caramel Flan Latte Espresso (Tall),4.15
+358,Starbucks,Caramel Flan Latte Espresso (Grande),4.75
+359,Starbucks,Caramel Flan Latte Espresso (Venti),4.95
+360,Starbucks,Caramel Macchiato Espresso (Tall),3.95
+361,Starbucks,Caramel Macchiato Espresso (Grande),4.45
+362,Starbucks,Caramel Macchiato Espresso (Venti),4.75
+363,Starbucks,White Chocolate Mocha Espresso (Tall),3.95
+364,Starbucks,White Chocolate Mocha Espresso (Grande),4.45
+365,Starbucks,White Chocolate Mocha Espresso (Venti),4.75
+366,Starbucks,Cinnamon Dolce Latte Espresso (Tall),3.95
+367,Starbucks,Cinnamon Dolce Latte Espresso (Grande),4.45
+368,Starbucks,Cinnamon Dolce Latte Espresso (Venti),4.75
+369,Starbucks,Starbucks Doubleshot Espresso (Tall),2.95
+370,Starbucks,Starbucks Doubleshot Espresso (Grande),3.45
+371,Starbucks,Starbucks Doubleshot Espresso (Venti),4.25
+372,Starbucks (Marketplace),Coffee of the Day(Tall),1.65
+373,Starbucks (Marketplace),Coffee of the Day(Grande),2.10
+374,Starbucks (Marketplace),Coffee of the Day(Venti),2.35
+375,Starbucks (Marketplace),Tazo Hot Tea(Tall),1.95
+376,Starbucks (Marketplace),Tazo Hot Tea(Grande),2.15
+377,Starbucks (Marketplace),Tazo Hot Tea(Venti),2.45
+378,Starbucks (Marketplace),Tazo Chai(Tall),2.95
+379,Starbucks (Marketplace),Tazo Chai(Grande),3.65
+380,Starbucks (Marketplace),Tazo Chai(Venti),3.95
+381,Starbucks (Marketplace),Hot Chocolate(Tall),2.65
+382,Starbucks (Marketplace),Hot Chocolate(Grande),3.15
+383,Starbucks (Marketplace),Hot Chocolate(Venti),3.35
+384,Starbucks (Marketplace),Iced Coffee(Tall),1.95
+385,Starbucks (Marketplace),Iced Coffee(Grande),2.45
+386,Starbucks (Marketplace),Iced Coffee(Venti),2.95
+387,Starbucks (Marketplace),Tazo Iced Tea(Tall),1.50
+388,Starbucks (Marketplace),Tazo Iced Tea(Grande),2.15
+389,Starbucks (Marketplace),Tazo Iced Tea(Venti),2.65
+390,Starbucks (Marketplace),Iced Tazo Chai(Tall),2.95
+391,Starbucks (Marketplace),Iced Tazo Chai(Grande),3.65
+392,Starbucks (Marketplace),Iced Tazo Chai(Venti),3.95
+393,Starbucks (Marketplace),Iced Caffe Latte(Tall),2.75
+394,Starbucks (Marketplace),Iced Caffe Latte(Grande),3.55
+395,Starbucks (Marketplace),Iced Caffe Latte(Venti),4.15
+396,Starbucks (Marketplace),Iced Caramel Macchiato(Tall),3.95
+397,Starbucks (Marketplace),Iced Caramel Macchiato(Grande),4.45
+398,Starbucks (Marketplace),Iced Caramel Macchiato(Venti),4.95
+399,Starbucks (Marketplace),Iced Caffe Mocha(Tall),3.25
+400,Starbucks (Marketplace),Iced Caffe Mocha(Grande),4.05
+401,Starbucks (Marketplace),Iced Caffe Mocha(Venti),4.65
+402,Starbucks (Marketplace),Iced White Chocolate Mocha(Tall),3.95
+403,Starbucks (Marketplace),Iced White Chocolate Mocha(Grande),4.45
+404,Starbucks (Marketplace),Iced White Chocolate Mocha(Venti),4.75
+405,Starbucks (Marketplace),Coffee Frappuccino (Grande),3.75
+406,Starbucks (Marketplace),Caramel Frappuccino (Grande),4.25
+407,Starbucks (Marketplace),Mocha Frappuccino (Grande),4.25
+408,Starbucks (Marketplace),Vanilla Bean Frappuccino (Grande),3.75
+409,Starbucks (Marketplace),Strawberries & Creme Frappuccino (Grande),4.25
+410,Starbucks (Marketplace),Caramel Macchicato(Tall),3.95
+411,Starbucks (Marketplace),Caramel Macchicato(Grande),4.45
+412,Starbucks (Marketplace),Caramel Macchicato(Venti),4.75
+413,Starbucks (Marketplace),Caffe Mocha(Tall),3.45
+414,Starbucks (Marketplace),Caffe Mocha(Grande),4.15
+415,Starbucks (Marketplace),Caffe Mocha(Venti),4.65
+416,Starbucks (Marketplace),White Chocolate Mocha(Tall),3.95
+417,Starbucks (Marketplace),White Chocolate Mocha(Grande),4.45
+418,Starbucks (Marketplace),White Chocolate Mocha(Venti),4.75
+419,Starbucks (Marketplace),Caffe Latte(Tall),2.75
+420,Starbucks (Marketplace),Caffe Latte(Grande),3.65
+421,Starbucks (Marketplace),Caffe Latte(Venti),4.15
+422,Starbucks (Marketplace),Cappuccino(Tall),2.95
+423,Starbucks (Marketplace),Cappuccino(Grande),3.65
+424,Starbucks (Marketplace),Cappuccino(Venti),4.15
+425,Starbucks (Marketplace),Caffe Americano(Tall),2.25
+426,Starbucks (Marketplace),Caffe Americano(Grande),2.65
+427,Starbucks (Marketplace),Caffe Americano(Venti),2.95
+428,Starbucks (Marketplace),Espresso (solo),1.75
+429,Starbucks (Marketplace),Espresso (doppio),1.95
+430,Starbucks (Marketplace),Espresso extra - Espresso Shot,0.80
+431,Starbucks (Marketplace),Espresso extra - Organic Soymilk,0.50
+432,Starbucks (Marketplace),Espresso extra - Flavor,0.50
+433,Starbucks (Marketplace),Assorted Muffins,2.50
+434,Starbucks (Marketplace),Muffin Tops,1.19
+435,Starbucks (Marketplace),Assorted Pastries,2.25
+436,Starbucks (Marketplace),Bagels,1.10
+437,Starbucks (Marketplace),Bagel & Cream Cheese,1.79
+438,Taco Bell,Gordita Supreme (Beef),2.19
+439,Taco Bell,Gordita Supreme (Chicken),3.09
+440,Taco Bell,Gordita Supreme (Steak),3.09
+441,Taco Bell,Meximelt,2.09
+442,Taco Bell,Crunchwrap Supreme,3.09
+443,Taco Bell,Fiesta Taco Salad Express,5.99
+444,Taco Bell,Quesadilla,3.59
+445,Taco Bell,Smothered Burrito (Beef),3.49
+446,Taco Bell,Smothered Burrito (Beef),4.49
+447,Taco Bell,Smothered Burrito (Beef),4.49
+448,Taco Bell,Soft drink (Small),1.79
+449,Taco Bell,Soft drink (Medium),1.89
+450,Taco Bell,Soft drink (Large),1.99
+451,Taco Bell,Soft drink (X-Large),2.19
+452,Taco Bell,Taco 12 Pack,12.99
+453,Taco Bell,Variety Taco 12 Pack,13.99
+454,Taco Bell,Crunchy Taco (Regular),1.39
+455,Taco Bell,Crunchy Taco (Supreme),1.89
+456,Taco Bell,Soft Taco (Regular),1.39
+457,Taco Bell,Soft Taco (Supreme),1.89
+458,Taco Bell,Double Decker Taco (Regular),1.79
+459,Taco Bell,Double Decker Taco (Supreme),2.49
+460,Taco Bell,Shredded Chicken Soft Taco,2.09
+461,Taco Bell,Grilled Steak Soft Taco,1.99
+462,Taco Bell,Doritos Locos Taco (Regular),1.41
+463,Taco Bell,Doritos Locos Taco (Supreme),1.89
+464,Taco Bell,Sriracha Quesarito,2.79
+465,Taco Bell,Quesarito,2.79
+466,Taco Bell,Quesarito (Box),6.49
+467,Taco Bell,XXL Grilled Stuft Burrito (Beef),4.36
+468,Taco Bell,XXL Grilled Stuft Burrito (Chicken),5.39
+469,Taco Bell,XXL Grilled Stuft Burrito (Steak),5.39
+470,Taco Bell,Burrito Supreme,2.79
+471,Taco Bell,Beefy 5-Layer Burrito,1.99
+472,Taco Bell,7-Layer Burrito,2.69
+473,Taco Bell,Bean Burrito,1.29
+474,Taco Bell,Shredded Chicken Burrito,2.09
+475,Taco Bell,Combo Burrito,3.29
+476,Taco Bell,Nachos Supreme Express,2.59
+477,Taco Bell,Nachos Express,1.19
+478,Taco Bell,Nachos Bellgrande Express,3.79
+479,Taco Bell,Burrito Supreme combo (#1),6.09
+480,Taco Bell,XXL Grilled Stuft Burrito combo (#2) (Beef),6.69
+481,Taco Bell,XXL Grilled Stuft Burrito combo (#2) (Chicken),7.49
+482,Taco Bell,XXL Grilled Stuft Burrito combo (#2) (Steak),7.69
+483,Taco Bell,3 Tacos Supreme combo (#3) (Chicken),6.19
+484,Taco Bell,3 Tacos Supreme combo (#3) (Steak),6.19
+485,Taco Bell,Shredded Chicken Soft Taco combo (#4),5.69
+486,Taco Bell,Nachos Bellgrande Express combo (#5),6.19
+487,Taco Bell,2 Gorditas Supreme combo (#6) (Beef),6.19
+488,Taco Bell,2 Gorditas Supreme combo (#6) (Chicken),7.99
+489,Taco Bell,2 Gorditas Supreme combo (#6) (Steak),7.99
+490,Taco Bell,Quesadilla combo (#7) (Chicken),6.29
+491,Taco Bell,Quesadilla combo (#7) (Steak),6.29
+492,Taco Bell,3 Tacos combo (#8) (Crunchy),4.99
+493,Taco Bell,3 Tacos combo (#8) (Soft),4.99
+494,Taco Bell,Crunchwrap Supreme combo (#9),5.69
+495,Taco Bell,Cheesey Gordita Crunch combo (#10),6.69
+496,Taco Bell,3 Doritos Locos Tacos combo (#11) (Regular),5.99
+497,Taco Bell,3 Doritos Locos Tacos combo (#11) (Supreme),6.89
+498,Taco Bell,Smothered Burrito combo (#12) (Beef),6.19
+499,Taco Bell,Smothered Burrito combo (#12) (Supreme chicken),7.29
+500,Taco Bell,Grande Meal,10.99
