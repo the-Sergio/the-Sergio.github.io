@@ -1,0 +1,17 @@
+budgetGrubbin.com
+	put in 6$
+	Show location filter (roundtable)
+	Show I Feel like eating filter on roundtable (wings)
+	Show I feel like eating (no location, burger)
+	show high to low -> low to high
+
+	Demo lunch box
+	Max Cash 6$
+	Pete's coffee 2.40 + Taco bell 7 layer Burrito
+
+	Follow us on social media for coupons
+	Facebook link (ctrl+click)
+
+Bring up App
+	Quick Demo
+	Avaiable at googleplay
